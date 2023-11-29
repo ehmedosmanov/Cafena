@@ -1,0 +1,29 @@
+
+{
+"news":[
+{
+    "id":1,
+    "image":"https://xpressrow.com/html/cafena/cafena/assets/images/blog/blog-1.jpeg",
+    "name":"Rasalina",
+    "about":"life",
+    "data":"23.01.2017",
+    "description":"ideal cocktails from our barmen for pefect mood"
+},
+{
+    "id":2,
+    "image":"https://xpressrow.com/html/cafena/cafena/assets/images/blog/blog-2.jpeg",
+    "name":"Rasalina",
+    "about":"life",
+    "data":"23.01.2017",
+    "description":"Build a cool mornig with cafena Coffee"
+},
+{
+    "id":3,
+    "image":"https://xpressrow.com/html/cafena/cafena/assets/images/blog/blog-3.jpeg",
+    "name":"Rasalina",
+    "about":"life",
+    "data":"23.01.2017",
+    "description":"Questions business must be able to answers"
+}
+]
+}
