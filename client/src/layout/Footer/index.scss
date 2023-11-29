@@ -1,0 +1,60 @@
+#footer{
+    background-color: black;
+    color: white;
+    height: 100vh;
+    .top-footer{
+        
+        padding-top: 30px;
+        .info{
+            gap: 10px;
+            align-items: center;
+        
+            .phone{
+font-size: 16px;
+text-transform: uppercase;
+            }
+            .num{
+                color: #a7a7a7;
+            }
+        }
+        .footer-widget{
+            .subscribe{
+                form{
+                    display: flex;
+                    align-items: center;
+                    position: relative;
+                    input{
+                        outline: none;
+                        border: none;
+                        background: transparent;
+                        padding: 15px;
+                        padding-left: 20px;
+                        font-size: 14px;
+                        border-bottom: 1px solid #32323D;
+                        width: 100%;
+                        padding-top: 0px;
+                        color: white;
+                    }
+                    input::placeholder{
+                        color: #a7a7a7;
+                    }
+                    button{
+                        color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: absolute;
+    right: 20px;
+    top: 0;
+    background: transparent;
+    font-size: 12px;
+    border: 0;
+                    }
+
+                }
+            }
+        }
+    }
+    .middle-footer{
+        margin-top: 65px;
+    }
+}
