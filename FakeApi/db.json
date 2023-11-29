@@ -1,0 +1,38 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "image": "https://xpressrow.com/html/cafena/cafena/assets/images/menu/menu-1.jpeg",
+      "name": "AMERICANO COFFEE",
+      "price": {
+        "original": 325.0,
+        "discounted": 348.0
+      },
+      "isStock": true,
+      "categoryId": 1,
+      "sku": "2584-MK63",
+      "brandId": 1,
+      "rating": 3
+    }
+  ],
+  "features": [ 
+    {
+      "id": 1,
+      "image": "https://xpressrow.com/html/cafena/cafena/assets/images/products/f-1.jpeg",
+      "name": "Best Coffee flavour",
+      "title": "Curabitur semper erat a lacusey sedn consequat, sit ametey."
+    },
+    {
+      "id": 2,
+      "image": "https://xpressrow.com/html/cafena/cafena/assets/images/products/f-1.jpeg",
+      "name": "Place to Get Lost",
+      "title": "Curabitur semper erat a lacusey sedn consequat, sit ametey."
+    },
+    {
+      "id": 3,
+      "image": "https://xpressrow.com/html/cafena/cafena/assets/images/products/f-1.jpeg",
+      "name": "Proper Roesting",
+      "title": "Curabitur semper erat a lacusey sedn consequat, sit ametey."
+    }
+  ]
+}
