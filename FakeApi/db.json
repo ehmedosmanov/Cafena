@@ -25,5 +25,25 @@
     "data":"23.01.2017",
     "description":"Questions business must be able to answers"
 }
+],
+"professional":[
+    {
+        "id":1,
+        "image":"https://xpressrow.com/html/cafena/cafena/assets/images/team/team-1.jpeg",
+        "name":"Rasalina de willamson",
+        "experience":"12"
+    },
+    {
+        "id":2,
+        "image":"https://xpressrow.com/html/cafena/cafena/assets/images/team/team-2.jpeg",
+        "name":"Rasalina de willamson",
+        "experience":"09"
+    },
+    {
+        "id":3,
+        "image":"https://xpressrow.com/html/cafena/cafena/assets/images/team/team-1.jpeg",
+        "name":"Rasalina de willamson",
+        "experience":"05"
+    }
 ]
 }
