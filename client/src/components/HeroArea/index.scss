@@ -1,0 +1,79 @@
+#hero-area {
+  background-image: url(https://xpressrow.com/html/cafena/cafena/assets/images/hero/hero-img-3-1.jpeg);
+  min-height: 90vh;
+  background-position: center top;
+  background-size: cover;
+  color: #fff;
+  .hero-content {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 90vh;
+    h1 {
+      font-size: 100px;
+    }
+    p {
+      color: #a7a7a7;
+      font-size: 18px;
+      padding-top: 15px;
+      padding-bottom: 30px;
+    }
+    .hero-buttons {
+      margin-bottom: 20px;
+    }
+    .hero-social_medias {
+      font-size: 18px;
+      .social-media {
+        margin-right: 32px;
+        cursor: pointer;
+        transition: all 0.3s;
+        &:hover {
+          color: #c7a17a;
+          transition: all 0.3s;
+        }
+      }
+      padding-top: 15px;
+      display: flex;
+      align-items: center;
+      .icon {
+        margin-left: 5px;
+      }
+    }
+  }
+}
+
+.custom-btn_primary {
+  font-size: 12px;
+  text-transform: uppercase;
+  color: #ffffff;
+  letter-spacing: 2px;
+  background: #c7a17a;
+  padding: 12px 34px;
+  border: none;
+  border-radius: 5px;
+  transition: all 0.3s;
+  position: relative;
+  overflow: hidden; /* Ensure overflow is hidden to hide the growing background */
+
+  &::after {
+    content: '';
+    width: 0; /* Set the initial width to 0 for the animation effect */
+    background: #32323d;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    left: 0;
+    transition: width 0.3s; /* Add transition for the width property */
+  }
+
+  &:hover::after {
+    width: 100%; /* Grow the background on hover */
+  }
+
+  //   &:hover {
+  //     color: #fff;
+  //     background: #32323d;
+  //     transition: all 0.3s;
+  //   }
+}
