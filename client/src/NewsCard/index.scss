@@ -1,0 +1,120 @@
+.news-card {
+  margin-bottom: 8px;
+
+  .thumb {
+    overflow: hidden;
+    .img {
+   max-width: 100%;
+      overflow: hidden;
+      img {
+        transition: all 0.4s;
+        width: 100%;
+      }
+    }
+  }
+
+  .content {
+    padding-top: 25px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 20px;
+    border: 1px solid #32323D;
+    border-top: 0px;
+
+    .blog__meta {
+      margin-bottom: 7px;
+
+      li {
+        color: #a7a7a7;
+        font-size: 14px;
+        text-transform: uppercase;
+
+        span {
+          color: #C7A17A;
+        }
+      }
+    }
+
+    .blog__title {
+      text-transform: capitalize;
+      color: #ffffff;
+      font-size: 22px;
+      font-family: "Jost", sans-serif;
+        position: relative;
+      & a{
+        position: relative;
+        display: inline;
+        background-image: -webkit-gradient(
+          linear,
+          left top,
+          right top,
+          from(currentColor),
+          to(currentColor)
+        );
+        background-image: -webkit-linear-gradient(
+          left,
+          currentColor 0%,
+          currentColor 100%
+        );
+        background-image: -o-linear-gradient(
+          left,
+          currentColor 0%,
+          currentColor 100%
+        );
+        background-image: linear-gradient(
+          to right,
+          currentColor 0%,
+          currentColor 100%
+        );
+        background-size: 0px 2px;
+        background-position: 0px 95%;
+        -webkit-transition: background-size 0.25s
+          cubic-bezier(0.785, 0.135, 0.15, 0.86) 0s;
+        -o-transition: background-size 0.25s
+          cubic-bezier(0.785, 0.135, 0.15, 0.86) 0s;
+        transition: background-size 0.25s cubic-bezier(0.785, 0.135, 0.15, 0.86)
+          0s;
+        padding: 0.7% 0px;
+        background-repeat: no-repeat;
+        color: inherit;
+        &:hover {
+          background-size: 100% 2px;
+        }
+      }
+    
+
+    }
+    
+    .read-more {
+      color: #a7a7a7;
+      text-transform: uppercase;
+      text-decoration: none;
+      font-size: 15px;
+      display: flex;
+      margin-top: 20px;
+      align-items: center;
+      transition: all 0.5s;
+
+      .strelka {
+        margin-left: 15px;
+        transition: all 0.5s;
+      }
+    }
+
+    .read-more:hover .strelka {
+      padding-left: 1px;
+      transform: translateX(-5px);
+      transition: all 0.5s;
+    }
+
+    .read-more:hover {
+      transition: all 0.5s;
+      color: white;
+    }
+  }
+}
+
+.news-card:hover img {
+  transform: scale(1.1);
+  transition: all 0.4s;
+}
