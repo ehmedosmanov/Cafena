@@ -7,15 +7,15 @@ const Feature_item = ({ id, name, title, image }) => {
         className="feature_item"
         style={{ backgroundImage: `url('${image}')` }}
       >
-        <div className="shape">
+        <div className="feature_item_shape">
           <img
             src="https://xpressrow.com/html/cafena/cafena/assets/images/shape/f-shape-1.png"
             alt=""
           />
         </div>
-        <div className="big_box">
-          <div className="box">
-            <p className="p_id">0{id}</p>
+        <div className="feature_item_big_box">
+          <div className="feature_item_box">
+            <p className="feature_item_p_id">0{id}</p>
             <h3>{name}</h3>
             <p>{title}</p>
           </div>

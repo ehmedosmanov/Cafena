@@ -2,14 +2,13 @@
     background-size: cover;
     background-repeat: no-repeat;
     min-height: 300px;
-    // max-width: 300px;    
     position: relative;
     background-position: center;
     top: 0;
     bottom: 0;
     padding-bottom: 25px;
 
-    .shape {
+    .feature_item_shape {
         position: absolute;
         top: 0;
         left: 0;
@@ -23,15 +22,15 @@
         }
 
     }
-    .big_box{
+    .feature_item_big_box{
         position: relative;
         top: 0;
         left: 0;
         color: white;
         z-index: 2;
-        .box{
+        .feature_item_box{
             padding: 20px 40px 20px 40px;
-            .p_id{
+            .feature_item_p_id{
                 color: #C7A17A;
             }
         }
@@ -47,7 +46,7 @@
     }
 }
 .feature_item:hover {
-    .big_box{
+    .feature_item_big_box{
         &::after{
         content: '';
         position: absolute;
