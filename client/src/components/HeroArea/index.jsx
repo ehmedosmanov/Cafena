@@ -4,6 +4,7 @@ import { FaSquareXTwitter } from 'react-icons/fa6'
 import { FaYoutube } from 'react-icons/fa'
 
 import './index.scss'
+import Button from '../CommonComponents/Button'
 const HeroArea = () => {
   return (
     <section id='hero-area'>
@@ -17,8 +18,8 @@ const HeroArea = () => {
                 over hot coals in a brazier. given an opportunity to sample.
               </p>
               <div className='hero-buttons'>
-                <button className='custom-btn_primary'>Testy Coffe</button>
-                <button className='custom-btn_secondary'>Read More</button>
+                <Button>Testy Coffe</Button>
+                <Button secondary>Read More</Button>
               </div>
               <div className='hero-social_medias'>
                 <span className='social-media d-flex align-items-center '>
@@ -35,6 +36,9 @@ const HeroArea = () => {
                 </spa>
               </div>
             </div>
+          </div>
+          <div className='col-xl-6 col-lg-5'>
+            <div className='video-content'></div>
           </div>
         </div>
       </div>
