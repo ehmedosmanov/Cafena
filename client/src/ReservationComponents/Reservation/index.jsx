@@ -1,5 +1,5 @@
 import React from 'react'
-import { Formik, Form, Field } from 'formik';
+import { Formik, Form, Field } from "formik";
 import "./index.scss"
 import * as Yup from 'yup';
 import Swal from 'sweetalert2';
@@ -11,7 +11,7 @@ const SignupSchema = Yup.object().shape({
     .max(50, 'Too Long!')
     .required('Required'),
     number: Yup.string()
-    .matches(/^\+?[0-9]*$/, 'Invalid phone number format')
+    .matches(/^\s*(?:\+?(\d{1,3}))?[-. (]*(\d{3})[-. )]*(\d{3})[-. ]*(\d{4})(?: *x(\d+))?\s*$/, 'Invalid phone number format')
     .required('Required'),
     date: Yup.string()
     .required('Required'),
@@ -44,10 +44,11 @@ const Reservation = () => {
               <Formik
        initialValues={{name: '', number: '',date:"",time:"", email: ''}}
        validationSchema={SignupSchema}
-       onSubmit={(values, { setSubmitting }) => {
+       onSubmit={(values, { setSubmitting, resetForm  }) => {
         setTimeout(() => {
           showSweetAlert(values); // Show SweetAlert on form submission
           setSubmitting(false);
+          resetForm();
         }, 400);
       }}
      >

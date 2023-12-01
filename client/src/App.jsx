@@ -5,7 +5,7 @@ import Main from "./layout/Main";
 import Home from "./pages/Home";
 import "../src/assets/scss/main.scss";
 import About from "./pages/About";
-import Reservation from "./pages/Reservation";
+import ReservationPage from "./pages/ReservationPage";
 
 function App() {
   return (
@@ -13,7 +13,7 @@ function App() {
       <Route path="/" element={<Main />}>
         <Route index element={<Home/>}/>
         <Route path="/about" element={<About/>} />
-        <Route path="/reservation" element={<Reservation/>}/>
+        <Route path="/reservation" element={<ReservationPage/>}/>
         {/* ABOUT */}
         {/* MENU */}
         {/* RESERVATION */}
