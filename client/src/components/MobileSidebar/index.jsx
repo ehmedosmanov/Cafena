@@ -10,7 +10,7 @@ const MobileSidebar = () => {
   const [isOpen, setIsOpen] = useState(false)
   console.log(isOpen)
 
-  const { isActive, handleOpenSidebar, sideBarRef } = useContext(GlobalContext)
+  const { isActive, handleOpenSidebar } = useContext(GlobalContext)
   const handleToggle = () => {
     setIsOpen(!isOpen)
   }
@@ -21,7 +21,7 @@ const MobileSidebar = () => {
       <aside
         id='sidebar-nav'
         className={`${isActive ? 'open' : ''}`}
-        ref={sideBarRef}>
+        >
         <div className='sidebar-nav_info'>
           <div className='sidebar-nav_logo'>
             <img

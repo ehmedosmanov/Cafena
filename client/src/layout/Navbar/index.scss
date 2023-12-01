@@ -12,6 +12,7 @@
         font-weight: 700;
         padding: 10px 12px;
       }
+     
     }
     a {
       display: block;
@@ -39,8 +40,9 @@
       top: 0;
       bottom: 0;
       margin-right: 25px;
+      z-index: 5;
       &::after {
-        content: '';
+        content: "";
         position: absolute;
         z-index: -1;
         top: 40%;
@@ -56,6 +58,7 @@
         transition: all 0.3s;
       }
       &:hover {
+        color: #c7a17a;
         .sub-menu {
           visibility: visible;
           opacity: 1;
@@ -73,6 +76,7 @@
       .sub-menu {
         visibility: hidden;
         opacity: 0;
+        z-index: 4;
         position: absolute;
         background-color: #fff;
         border-radius: 12px;
@@ -85,7 +89,7 @@
         max-height: 0px;
         li {
           &::after {
-            content: '';
+            content: "";
             position: absolute;
             z-index: -1;
             top: 35%;

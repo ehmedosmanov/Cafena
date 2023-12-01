@@ -1,4 +1,5 @@
 import React from 'react'
+import BasketSidebar from '../../components/BasketSidebar'
 import HeroArea from '../../components/HeroArea'
 
 const Home = () => {
@@ -6,6 +7,7 @@ const Home = () => {
     <>
       {/* Home */}
       <HeroArea />
+      <BasketSidebar/>
     </>
   )
 }
