@@ -25,7 +25,7 @@
 
                 .social-links__trigger {
                     border: none;
-transition: all 0.3s;
+                    transition: all 0.3s;
                     color: #958f8a;
                     font-size: 13px;
                     width: 45px;
@@ -37,53 +37,79 @@ transition: all 0.3s;
                     box-shadow: 0px 6px 21px 0px rgba(118, 118, 118, 0.09);
                     justify-content: center;
                     align-items: center;
+                    transition: 0.6s cubic-bezier(0.25, 1, 0.5, 1);
 
+                    .list-unstyled {
+                        position: absolute;
+                        transition: 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+                        opacity: 0;
+                        visibility: hidden;
+                        transform: translateY(70%);
+
+                        .face {
+                            transition-delay: 100ms;
+                            transition: all 0.5s;
+                        }
+
+                        .ywit {
+                            transition: all 0.5s;
+                            transition-delay: 200ms;
+                        }
+
+                        .pint {
+                            transition: all 0.5s;
+                            transition-delay: 400ms;
+                        }
+
+                        .in {
+                            transition: all 0.5s;
+                            transition-delay: 600ms;
+                        }
+
+                        li {
+                            transition: 0.4s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+                            transition: all 0.6s;
+                            color: #a7a7a7;
+                            margin-bottom: 0;
+                        }
+
+                        li:hover a {
+                            background-color: #C7A17A;
+                            color: white;
+                            transition: all 0.6s;
+                        }
+
+                        a {
+                            margin-bottom: 10px;
+                            border: none;
+                            color: #958f8a;
+                            font-size: 13px;
+                            width: 45px;
+                            border-radius: 5px;
+                            height: 45px;
+                            background: #ffffff;
+                            display: flex;
+                            box-shadow: 0px 6px 21px 0px rgba(118, 118, 118, 0.09);
+                            justify-content: center;
+                            align-items: center;
+                        }
+                    }
                 }
-                .social-links__trigger:hover{
-background-color: #C7A17A;
-color: white;
-transition: all 0.3s;
-                }
-                .social-links__trigger:hover .list-unstyled{
-opacity: 1;
-visibility: visible;
-                }
-                 .list-unstyled {
-                position: absolute;
-                transform: translateX(-50%);
+            }
+
+            .social-links__trigger:hover {
+                background-color: #C7A17A;
+                color: white;
+                transition: all 0.3s;
+
+            }
+
+            .social-links__trigger:hover .list-unstyled {
+                opacity: 1;
+                visibility: visible;
                 transition: 0.6s cubic-bezier(0.25, 1, 0.5, 1);
-                opacity: 0;
-                visibility: hidden;
-                left: 50%;
-              
-
-                li {
-                    transition: 0.4s cubic-bezier(0.68, -0.6, 0.32, 1.6);
-                    color: #a7a7a7;
-                    margin-bottom: 0;
-                }
-
-                a {
-                    margin-bottom: 10px;
-                    border: none;
-    color: #958f8a;
-    font-size: 13px;
-    width: 45px;
-    border-radius: 5px;
-    height: 45px;
-    background: #ffffff;
-    display: flex;
-    box-shadow: 0px 6px 21px 0px rgba(118, 118, 118, 0.09);
-    justify-content: center;
-    align-items: center;
-                }
             }
-            }
-
-
-           
         }
-
         .content {
             h4 {
                 font-size: 18px;
@@ -102,12 +128,10 @@ visibility: visible;
             }
         }
     }
+
     .team__box:hover img {
-       
+
         border-radius: 0px 60px 60px 60px;
         transition: all 0.3s ease-out 0s;
     }
 }
-
-
-
