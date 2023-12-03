@@ -42,8 +42,20 @@
       left: 0;
       .basket_count {
         position: absolute;
-        top: 10;
-        right: 0;
+        right: -51%;
+        background-color: #80a093;
+        font-size: 12px;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+      }
+      .wishlist_count {
+        position: absolute;
+        right: -51%;
         background-color: #80a093;
         font-size: 12px;
         width: 20px;

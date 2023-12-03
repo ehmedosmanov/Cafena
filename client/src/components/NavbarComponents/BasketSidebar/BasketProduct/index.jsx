@@ -3,7 +3,8 @@ import './index.scss'
 import { IoMdClose } from 'react-icons/io'
 import { BasketContext } from '../../../../context/BasketContext'
 const BasketProduct = ({ id, image, name, price, discount, count }) => {
-  const { basket, removeFromBasket } = useContext(BasketContext)
+  const { basket, removeFromBasket, handleInc, handleDec } =
+    useContext(BasketContext)
 
   const calcDiscountedPrice = (price, discount) => {
     const discountedAmount = (price * discount) / 100
@@ -26,6 +27,13 @@ const BasketProduct = ({ id, image, name, price, discount, count }) => {
         <span className='total'>
           TOTAL: ${(discountedPrice * count).toFixed(2)}
         </span>
+        <div
+          className='counter pt-1 d-flex align-items-center'
+          onClick={() => handleDec(id)}>
+          <button>-</button>
+          <span className='px-2'>{count}</span>
+          <button onClick={() => handleInc(id)}>+</button>
+        </div>
       </div>
       <div className='delete-basket ms-auto '>
         <button
