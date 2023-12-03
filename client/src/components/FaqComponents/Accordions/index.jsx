@@ -23,8 +23,10 @@ const Accordions = () => {
   };
 
   return (
+    <div id="FaqComponents">
+
     <div className="container">
-      <div className="accordion_wrapper">
+      <div className="row">
 
       <Accordion
         title="How does this work?"
@@ -57,6 +59,7 @@ const Accordions = () => {
         isOpen={openSection === 5}
         toggleAccordion={() => toggleAccordion(5)}
       />
+      </div>
       </div>
 
     </div>
