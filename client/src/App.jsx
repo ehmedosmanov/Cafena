@@ -9,6 +9,7 @@ import Faq from './pages/Faq'
 import About from './pages/About'
 import ReservationPage from './pages/ReservationPage'
 import DeatailsPage from './DetailsComponents/DetailsPage'
+import Not404 from "./pages/Not404";
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
         {/* SHOP */}
         {/* CONTACT */}
       </Route>
+        <Route path="/*" element={<Not404/>}/>
     </Routes>
   )
 }
