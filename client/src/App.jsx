@@ -12,6 +12,8 @@ function App() {
     <Routes>
       <Route path="/" element={<Main />}>
         <Route index element={<Home/>}/>
+        <Route path="/faq" element={<Faq/>}/>
+        <Route path="/about" element={<About/>} />
         {/* ABOUT */}
         {/* MENU */}
         {/* RESERVATION */}
