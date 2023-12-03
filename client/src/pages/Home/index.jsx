@@ -6,6 +6,7 @@ import BookingTable from '../../BookingTableComponents/BookingTableSection'
 import LayoutCoffee from '../../LayoutCoffe'
 import Feature__items from '../../components/Feature__items'
 import { Our_history } from '../../components/Our_history'
+import Manu from '../../components/CafenaPopularMenu'
 import HeroArea from '../../components/HomeComponents/HeroArea'
 import PopularProductsSection from '../../components/HomeComponents/PopularProductsSection'
 
@@ -20,6 +21,7 @@ const Home = () => {
       <BookingTable></BookingTable>
       <Feature__items></Feature__items>
       <Our_history></Our_history>
+      <Manu></Manu>
     </>
   )
 }
