@@ -6,6 +6,7 @@ import Home from "./pages/Home";
 import "../src/assets/scss/main.scss";
 import About from "./pages/About";
 import ReservationPage from "./pages/ReservationPage";
+import DeatailsPage from "./DetailsComponents/DetailsPage";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route index element={<Home/>}/>
         <Route path="/about" element={<About/>} />
         <Route path="/reservation" element={<ReservationPage/>}/>
+        <Route path="/details" element={<DeatailsPage/>}/>
         {/* ABOUT */}
         {/* MENU */}
         {/* RESERVATION */}
