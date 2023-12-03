@@ -4,8 +4,6 @@ import CoffeMachineSection from '../../HomeSections/CoffeeMachineSec'
 import OurNewsSection from '../../HomeSections/OurNewsSection'
 import BookingTable from '../../BookingTableComponents/BookingTableSection'
 import LayoutCoffee from '../../LayoutCoffe'
-
-
 import Feature__items from '../../components/Feature__items'
 import { Our_history } from '../../components/Our_history'
 const Home = () => {
