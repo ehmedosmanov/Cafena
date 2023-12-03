@@ -7,6 +7,7 @@ import "../src/assets/scss/main.scss";
 import About from "./pages/About";
 import ReservationPage from "./pages/ReservationPage";
 import DeatailsPage from "./DetailsComponents/DetailsPage";
+import WishlistProvider, { WishlistContext } from "./WishlistComponents/WishlistContext";
 
 function App() {
   return (

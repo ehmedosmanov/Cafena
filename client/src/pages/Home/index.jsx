@@ -4,6 +4,7 @@ import CoffeMachineSection from '../../HomeSections/CoffeeMachineSec'
 import OurNewsSection from '../../HomeSections/OurNewsSection'
 import BookingTable from '../../BookingTableComponents/BookingTableSection'
 import LayoutCoffee from '../../LayoutCoffe'
+// import SwiperSection from '../../HomeSections/SwiperSection'
 
 
 
@@ -17,6 +18,7 @@ const Home = () => {
   <OurNewsSection></OurNewsSection>
 
 <BookingTable></BookingTable>
+{/* <SwiperSection></SwiperSection> */}
     </>
   )
 }

@@ -1,4 +1,5 @@
 #product-det-first {
+  padding-bottom: 120px;
   .product-details__wrapper {
     display: flex;
     flex-wrap: wrap;
@@ -56,18 +57,20 @@
     padding-left: 25px;
     .tr-wrapper{
         margin-bottom: 20px;
-
+justify-content: space-between;
        .title{
         font-size: 30px;
         font-weight: 400;
     color: #000;
     line-height: 1.4;
+    padding-right: 20px;
        }  
        .rating-wrapper{
         display: flex;
         align-items: center;
         justify-content: center;
         .rattings{
+          margin-bottom: 4px;
             position: relative;
     margin-right: 10px;
          .star-pd{
@@ -75,6 +78,15 @@ margin-right: 5px;
 font-size: 16px;
     color: #C7A17A;
          }   
+        }
+        .rattings::after{
+          position: absolute;
+    content: "";
+    height: 28px;
+    width: 2px;
+    background: #E2DFDD;
+    left: -20px;
+    top: -5px;
         }
        .rt-num{
         font-size: 14px;
@@ -163,17 +175,19 @@ background: #C7A17A;
        }
        .wishlist{
         color: #000;
-        font-size: 14px;
+        font-size: 16px;
         text-decoration: none;
         font-weight: 500;
         display: block;
         margin-top: 17px;
         position: relative;
-        margin-bottom: 20px;
+        margin-bottom: 30px;
+        margin-top: 30px;
+        
        }
        .wishlist::after{
         height: 2px;
-    width: 360px;
+    width:200px;
     background-color: #E2DFDD;
     bottom: -10px;
     position: absolute;
@@ -218,6 +232,32 @@ background: #C7A17A;
     
   }
 }
+@media screen and (max-width:1200px){
+  #product-det-first{
+    .product-details__content{
+      .tr-wrapper{
+        flex-direction: column;
+        justify-content: start;
+        align-items: start !important;
+        margin-bottom: 20px;
+        .rating-wrapper{
+          .rattings{
+            position: relative;
+          }
+          .rattings::after{
+            position: absolute;
+      content: "";
+      height: 0px;
+      width: 0px;
+      background: #E2DFDD;
+      left: -20px;
+      top: -5px;
+          }
+        }
+      }
+    }
+  }
+}
 
 @media screen and (max-width:768px) {
     #product-det-first {
@@ -232,6 +272,13 @@ background: #C7A17A;
                 margin-right: 10px;
             }
           }
+        }
+        .product-details__content{
+         .product-quantity{
+          flex-direction: column;
+          align-items: start !important;
+          gap: 10px;
+         } 
         }
       }
 }
