@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useContext } from 'react'
 import { NavLink } from 'react-router-dom'
-import { FaSearch, FaShoppingBasket, FaBars } from 'react-icons/fa'
+import { FaSearch, FaShoppingBasket, FaBars, FaHeart } from 'react-icons/fa'
 import './index.scss'
 import MobileNav from '../../components/NavbarComponents/MobileNav'
 import MobileSidebar from '../../components/NavbarComponents/MobileSidebar'
@@ -8,9 +8,11 @@ import SearchNav from './SearchNav'
 import { GlobalContext } from '../../context/GlobalContext'
 import { BasketContext } from '../../context/BasketContext'
 import BasketSidebar from '../../components/NavbarComponents/BasketSidebar'
+import WishlistSidebar from '../../components/NavbarComponents/WishlistSidebar'
 
 const Navbar = ({ home }) => {
-  const { handleOpenBasketSidebar } = useContext(GlobalContext)
+  const { handleOpenBasketSidebar, handleOpenWishlistSidebar } =
+    useContext(GlobalContext)
   const { basket } = useContext(BasketContext)
   const [isSticky, setIsSticky] = useState(false)
 
@@ -107,9 +109,17 @@ const Navbar = ({ home }) => {
                     <div
                       className='nav-basket'
                       onClick={handleOpenBasketSidebar}>
-                      <span>
+                      <span className='position-relative'>
                         <FaShoppingBasket />
                         <span className='basket_count'>{sumCount}</span>
+                      </span>
+                    </div>
+                    <div
+                      className='nav-wishlist'
+                      onClick={handleOpenWishlistSidebar}>
+                      <span className='position-relative'>
+                        <FaHeart />
+                        <span className='wishlist_count'>0</span>
                       </span>
                     </div>
                   </div>
@@ -122,6 +132,7 @@ const Navbar = ({ home }) => {
       </header>
       <MobileSidebar />
       <BasketSidebar />
+      <WishlistSidebar />
     </>
   )
 }

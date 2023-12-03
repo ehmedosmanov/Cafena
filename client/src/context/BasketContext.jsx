@@ -15,6 +15,26 @@ const BasketProvider = ({ children }) => {
     setBasket([...basket, { ...product, count: 1 }])
   }
 
+  const handleInc = id => {
+    const findProductFromBasket = basket.find(x => x.id === id)
+    console.log(findProductFromBasket)
+    if (findProductFromBasket) {
+      findProductFromBasket.count++
+      console.log(findProductFromBasket.count++)
+      setBasket([...basket])
+    }
+  }
+
+  const handleDec = id => {
+    const findProductFromBasket = basket.find(x => x.id === id)
+    findProductFromBasket.count--
+    if (findProductFromBasket.count === 0) {
+      setBasket(basket.filter(item => item.id !== id))
+      return
+    }
+    setBasket([...basket])
+  }
+
   const removeFromBasket = id => {
     setBasket(basket.filter(item => item.id !== id))
   }
@@ -22,7 +42,9 @@ const BasketProvider = ({ children }) => {
     basket,
     setBasket,
     addToBasket,
-    removeFromBasket
+    removeFromBasket,
+    handleInc,
+    handleDec
   }
   return (
     <BasketContext.Provider value={data}>{children}</BasketContext.Provider>

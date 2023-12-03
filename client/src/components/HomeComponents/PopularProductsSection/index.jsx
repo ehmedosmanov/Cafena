@@ -3,6 +3,7 @@ import './index.scss'
 import Button from '../../CommonComponents/Button'
 import ProductCard from '../../CommonComponents/ProductCard'
 import useFetch from '../../../hooks/useFetch'
+import { NavLink } from 'react-router-dom'
 
 const PopularProductsSection = () => {
   const baseUrl = 'http://localhost:3000/products'
@@ -25,7 +26,9 @@ const PopularProductsSection = () => {
             <h2>CAFENA POPULAR PRODUCT</h2>
           </div>
           <div className='products-title_right'>
-            <Button>VIEW ALL PRODUCT</Button>
+            <NavLink to={'/Shop'}>
+              <Button>VIEW ALL PRODUCT</Button>
+            </NavLink>
           </div>
         </div>
         <div className='row pt-2'>

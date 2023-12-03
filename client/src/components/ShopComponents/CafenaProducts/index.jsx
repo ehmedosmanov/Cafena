@@ -2,7 +2,6 @@ import React, { useContext, useEffect, useState } from 'react'
 import { BsFillGrid3X3GapFill } from 'react-icons/bs'
 import { FaListUl } from 'react-icons/fa'
 import ProductCard from '../../CommonComponents/ProductCard'
-import './index.scss'
 import useFetch from '../../../hooks/useFetch'
 import SearchProduct from '../SearchProduct'
 import Widget from '../../CommonComponents/Widget'
@@ -10,6 +9,8 @@ import CategoriesFilter from '../CategoriesFilter'
 import PriceFilter from '../PriceFilter'
 import { ShopContext } from '../../../context/ShopContext'
 import TopProducts from '../TopProducts'
+import './index.scss'
+
 const CafenaProducts = () => {
   //Urls
   const baseUrl = 'http://localhost:3000/products'
@@ -103,7 +104,7 @@ const CafenaProducts = () => {
   useEffect(() => {
     const numbers = []
     for (
-      let i = 0;
+      let i = 1;
       i < Math.ceil((sortedProducts?.length || 1) / pagePerData);
       i++
     ) {
@@ -122,6 +123,17 @@ const CafenaProducts = () => {
 
   const handlePaginationClick = num => {
     setCurrentPage(num)
+  }
+  const handlePrevPage = () => {
+    if (currentPage > 1) {
+      setCurrentPage(currentPage - 1)
+    }
+  }
+
+  const handleNextPage = () => {
+    if (currentPage < pageNumbers.length) {
+      setCurrentPage(currentPage + 1)
+    }
   }
 
   return (
@@ -183,11 +195,16 @@ const CafenaProducts = () => {
                 </div>
               </div>
               <div className='pagination mt-5 d-flex justify-content-center  align-items-center'>
+                <button onClick={handlePrevPage}>&laquo; Prev</button>
                 {pageNumbers.map(num => (
-                  <button key={num} onClick={() => handlePaginationClick(num)}>
+                  <button
+                    key={num}
+                    onClick={() => handlePaginationClick(num)}
+                    className={currentPage === num ? 'active' : ''}>
                     {num}
                   </button>
                 ))}
+                <button onClick={handleNextPage}>Next &raquo;</button>
               </div>
             </div>
             <div className='col-xl-4'>

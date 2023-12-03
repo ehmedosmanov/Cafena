@@ -60,7 +60,7 @@ const ProductCard = ({
           <button className='add-basket' onClick={() => addToBasket(product)}>
             <CiShoppingBasket />
           </button>
-          <button className='add-wishlist'>
+          <button className='wishlist-btn'>
             <CiHeart />
           </button>
           <button className='detail-modal'>
