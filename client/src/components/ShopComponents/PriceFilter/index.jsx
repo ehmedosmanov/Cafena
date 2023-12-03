@@ -36,7 +36,6 @@ const PriceFilter = () => {
         <p>
           Price range: ${selectedPriceRange[0]} - ${selectedPriceRange[1]}
         </p>
-        <button className='price-filter-btn'>Filter</button>
       </div>
     </div>
   )

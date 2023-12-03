@@ -1,10 +1,22 @@
 import React from 'react'
 import TopProductCard from './TopProductCard'
-
+import useFetch from '../../../hooks/useFetch'
 const TopProducts = () => {
+  const baseUrl = 'http://localhost:3000/products'
+  const { data, loading } = useFetch(baseUrl)
+  if (loading) {
+    return <p>...LOADING</p>
+  }
+
+  const filterTopProducts = data
+    ? data.filter(product => product.rating === 5)
+    : []
   return (
     <div className='top-products'>
-      <TopProductCard />
+      {filterTopProducts &&
+        filterTopProducts.map(item => (
+          <TopProductCard key={item.id} {...item} />
+        ))}
     </div>
   )
 }

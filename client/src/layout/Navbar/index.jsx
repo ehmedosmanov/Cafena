@@ -17,7 +17,11 @@ const Navbar = ({ home }) => {
   useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY
-      setIsSticky(scrollPosition > 300)
+      if (scrollPosition > 300) {
+        setIsSticky(scrollPosition > 300)
+      } else {
+        setIsSticky(false)
+      }
     }
 
     window.addEventListener('scroll', handleScroll)

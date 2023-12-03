@@ -16,10 +16,10 @@ const ProductCard = ({
   price,
   discount,
   sku,
-  rating
+  rating,
+  categoryId
 }) => {
   const [isHover, setIsHover] = useState(false)
-
   const { addToBasket } = useContext(BasketContext)
 
   const handleMouseEnter = () => {
@@ -94,6 +94,7 @@ const ProductCard = ({
               </>
             )}
           </div>
+          {/* <span>{cate</span> */}
           <div className='product_name py-1'>
             <a href='#'>{name}</a>
           </div>
@@ -106,7 +107,7 @@ const ProductCard = ({
                 <>
                   ${discountedPrice} /
                   <span className='dis-price'>
-                    <del>{price}</del>
+                    <del>${price}</del>
                   </span>
                 </>
               )}

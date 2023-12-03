@@ -1,4 +1,10 @@
 .categories-filter {
+  &.active {
+    .category-box {
+      border: 1px solid #000;
+      transition: all 0.3s;
+    }
+  }
   .category-box {
     cursor: pointer;
     color: #525050;

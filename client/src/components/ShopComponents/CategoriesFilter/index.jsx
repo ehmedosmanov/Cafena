@@ -1,13 +1,14 @@
 import React, { useContext } from 'react'
 import './index.scss'
-import { ShopContext, useShopContext } from '../../../context/ShopContext'
+import { ShopContext } from '../../../context/ShopContext'
 const CategoriesFilter = ({ id, name, count }) => {
   const { handleCategory, setSelectedCategory, selectedCategory } =
-    useShopContext()
+    useContext(ShopContext)
 
-  const handleClickCategory = () => {}
   return (
-    <div className='categories-filter'>
+    <div
+      className={`categories-filter ${selectedCategory === id ? 'active' : ''}`}
+      onClick={() => handleCategory(id)}>
       <div className='category-box'>
         <span className='category-name'>{name}</span>
         <span className='category-name'>{count}</span>
