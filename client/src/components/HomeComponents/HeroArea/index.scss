@@ -1,0 +1,161 @@
+#hero-area {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(33, 37, 36, 0.6)),
+    url(https://xpressrow.com/html/cafena/cafena/assets/images/hero/hero-img-3-1.jpeg);
+  min-height: 90vh;
+  background-position: center top;
+  background-size: cover;
+  color: #fff;
+  position: relative;
+  .hero-content {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 90vh;
+    // min-height: 54vh;
+    position: relative;
+
+    h1 {
+      font-size: clamp(3.125rem, 0.2404rem + 8.0128vw, 6.25rem);
+      max-width: 90%;
+    }
+    p {
+      color: #a7a7a7;
+      font-size: 18px;
+      padding-top: 15px;
+      padding-bottom: 30px;
+    }
+    .hero-buttons {
+      margin-bottom: 20px;
+    }
+    .hero-social_medias {
+      font-size: 18px;
+      display: flex;
+      gap: 17px;
+      .social-media {
+        cursor: pointer;
+        transition: all 0.3s;
+        &:hover {
+          color: #c7a17a;
+          transition: all 0.3s;
+        }
+      }
+      padding-top: 15px;
+      display: flex;
+      align-items: center;
+      .icon {
+        margin-left: 5px;
+      }
+    }
+  }
+  .video-content {
+    position: relative;
+    z-index: 11;
+    background-image: linear-gradient(
+      rgba(0, 0, 0, 0.4),
+      rgba(33, 37, 36, 0.6)
+    );
+    width: 100%;
+    height: 100%;
+  }
+  .play-video {
+    position: absolute;
+    // right: 152px;
+    bottom: 14%;
+    right: 0;
+    border: 0;
+    bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    span {
+      text-align: center;
+      margin-top: 12px;
+      margin-left: 15px;
+    }
+    .open-vide_modal {
+      font-size: 23px;
+      border: 1px solid #ccc;
+      border-radius: 100%;
+      display: flex;
+      justify-content: center;
+      padding: 35px;
+      align-items: center;
+      text-align: center;
+      color: #ccc;
+      cursor: pointer;
+    }
+  }
+
+  .video-modal {
+    background-image: linear-gradient(
+      rgba(0, 0, 0, 0.4),
+      rgba(33, 37, 36, 0.6)
+    );
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .close-vide_modal {
+      position: absolute;
+      top: 30px;
+      right: 30px;
+      cursor: pointer;
+      font-size: 40px;
+      color: #ccc;
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  #hero-area {
+    .hero-content {
+      min-height: 54vh;
+    }
+    .play-video {
+      position: relative;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #hero-area {
+    .hero-content {
+      text-align: center;
+      align-items: center;
+      justify-content: flex-start;
+      padding: 56px 0;
+      .hero-buttons {
+        display: flex;
+        flex-direction: column;
+        width: 60%;
+        gap: 20px;
+        .custom-btn_secondary {
+          margin: 0;
+        }
+      }
+      .hero-social_medias {
+        .social-media {
+          flex-direction: column;
+        }
+      }
+    }
+    // .play-video {
+    //   top: 80%;
+    //   left: 50%;
+    //   transform: translate(-50%,-50%);
+    // }
+  }
+}

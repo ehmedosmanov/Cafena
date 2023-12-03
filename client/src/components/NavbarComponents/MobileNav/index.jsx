@@ -1,9 +1,11 @@
 import React, { useContext } from 'react'
-import { NavLink } from 'react-router-dom'
+import { NavLink, Outlet } from 'react-router-dom'
 import { FaSearch, FaShoppingBasket, FaBars } from 'react-icons/fa'
 import './index.scss'
-import Dropdown from '../CommonComponents/Dropdown'
-import { GlobalContext } from '../../context/GlobalContext'
+import Dropdown from '../../CommonComponents/Dropdown'
+import { GlobalContext } from '../../../context/GlobalContext'
+import SearchNav from '../../../layout/Navbar/SearchNav'
+import { useState } from 'react'
 
 const MobileNav = () => {
   const dropdownData = [
@@ -11,11 +13,12 @@ const MobileNav = () => {
     { label: 'BLOG', link: '/Blog' },
     { label: 'Gallery', link: '/' }
   ]
-  const { handleOpenSidebar } = useContext(GlobalContext)
+  const { handleOpenSidebar, handleOpenBasketSidebar } =
+    useContext(GlobalContext)
 
   return (
     <div className='row d-xl-none d-lg-flex align-items-center'>
-      <div className='col-lg-9 col-10'>
+      <div className='col-lg-9 col-8'>
         <div className='mobile-left_side'>
           <div className='nav-logo d-lg-none d-block'>
             <NavLink to={'/'}>
@@ -53,16 +56,17 @@ const MobileNav = () => {
           </nav>
         </div>
       </div>
-      <div className='col-lg-3 col-2'>
+      <div className='col-lg-3 col-4'>
         <div className='nav-actions d-flex  justify-content-end'>
-          <div className='nav-search'>
-            <FaSearch />
-          </div>
+          <SearchNav />
           <div className='nav-burger' onClick={handleOpenSidebar}>
             <FaBars />
           </div>
-          <div className='nav-basket'>
-            <FaShoppingBasket />
+          <div className='nav-basket' onClick={handleOpenBasketSidebar}>
+            <span>
+              <FaShoppingBasket />
+              <span className='basket_count'>0</span>
+            </span>
           </div>
         </div>
       </div>

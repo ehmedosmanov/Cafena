@@ -1,17 +1,18 @@
 import React, { useContext } from 'react'
 import './index.scss'
-import { GlobalContext } from '../../context/GlobalContext'
+import { GlobalContext } from '../../../context/GlobalContext'
 
 const Overlay = () => {
-  const { isActive, setIsActive } = useContext(GlobalContext)
+  const { isActive, setIsActive, isOpen, setIsOpen } = useContext(GlobalContext)
 
   const handleCloseSidebar = () => {
     setIsActive(false)
+    setIsOpen(false)
   }
 
   return (
     <div
-      className={`${isActive ? 'active' : ''} overlay`}
+      className={`${isActive || isOpen ? 'active' : ''} overlay`}
       onClick={handleCloseSidebar}></div>
   )
 }

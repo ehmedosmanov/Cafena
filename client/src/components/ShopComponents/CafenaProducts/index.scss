@@ -1,0 +1,31 @@
+#cafena-products {
+  padding: 100px 0;
+  .cafena-products-info {
+    border: 1px solid #ccc;
+    padding: 9px 18px;
+    border-radius: 7px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .showing {
+      color: #aeaeae;
+    }
+    select {
+      cursor: pointer;
+      border: none;
+      outline: none;
+    }
+    .grid-layout {
+      span {
+        cursor: pointer;
+        padding: 5px;
+      }
+    }
+  }
+  .cafena-products-main {
+    // .cafena-products-content {
+    // }
+    .cafena-products-filters {
+    }
+  }
+}

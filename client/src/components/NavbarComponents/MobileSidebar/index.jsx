@@ -5,12 +5,11 @@ import { FaPlus } from 'react-icons/fa6'
 import { NavLink } from 'react-router-dom'
 
 import './index.scss'
-import { GlobalContext } from '../../context/GlobalContext'
+import { GlobalContext } from '../../../context/GlobalContext'
 const MobileSidebar = () => {
   const [isOpen, setIsOpen] = useState(false)
-  console.log(isOpen)
 
-  const { isActive, handleOpenSidebar, sideBarRef } = useContext(GlobalContext)
+  const { isActive, handleOpenSidebar } = useContext(GlobalContext)
   const handleToggle = () => {
     setIsOpen(!isOpen)
   }
@@ -18,10 +17,7 @@ const MobileSidebar = () => {
   return (
     <>
       {/* // {toggle && <Overlay />} */}
-      <aside
-        id='sidebar-nav'
-        className={`${isActive ? 'open' : ''}`}
-        ref={sideBarRef}>
+      <aside id='sidebar-nav' className={`${isActive ? 'open' : ''}`}>
         <div className='sidebar-nav_info'>
           <div className='sidebar-nav_logo'>
             <img

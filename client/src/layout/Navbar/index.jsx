@@ -1,26 +1,49 @@
-import React from 'react'
+import React, { useEffect, useState, useContext } from 'react'
 import { NavLink } from 'react-router-dom'
 import { FaSearch, FaShoppingBasket, FaBars } from 'react-icons/fa'
-
 import './index.scss'
-import MobileNav from '../../components/MobileNav'
-import MobileSidebar from '../../components/MobileSidebar'
+import MobileNav from '../../components/NavbarComponents/MobileNav'
+import MobileSidebar from '../../components/NavbarComponents/MobileSidebar'
+import SearchNav from './SearchNav'
+import { GlobalContext } from '../../context/GlobalContext'
+import { BasketContext } from '../../context/BasketContext'
+import BasketSidebar from '../../components/NavbarComponents/BasketSidebar'
 
-const Navbar = () => {
+const Navbar = ({ home }) => {
+  const { handleOpenBasketSidebar } = useContext(GlobalContext)
+  const { basket } = useContext(BasketContext)
+  const [isSticky, setIsSticky] = useState(false)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY
+      setIsSticky(scrollPosition > 300)
+    }
+
+    window.addEventListener('scroll', handleScroll)
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+    }
+  }, [])
+
+  const headerClassNames = `header ${home ? 'home' : ''} ${
+    isSticky ? 'header-sticky' : ''
+  }`
+  const sumCount = basket.reduce((acc, x) => acc + x.count, 0)
+
   return (
     <>
-      <header id='header'>
+      <header className={headerClassNames}>
         <div className='header-content'>
-          <div className='custom-container'>
+          <div className='container'>
             <div className='row d-xl-flex d-none align-items-center'>
               <div className='col-xl-5 col-lg-4'>
                 <div className='main-menu_1'>
                   <nav id='left-side_nav'>
                     <ul className='nav-items d-flex'>
                       <li className='nav-item'>
-                        <NavLink activeClassName='active' to={'/'}>
-                          Home
-                        </NavLink>
+                        <NavLink to={'/'}>Home</NavLink>
                       </li>
                       <li className='nav-item'>
                         <NavLink to={'/About'}>About</NavLink>
@@ -39,7 +62,11 @@ const Navbar = () => {
                 <div className='nav-logo d-inline'>
                   <NavLink to={'/'}>
                     <img
-                      src='https://xpressrow.com/html/cafena/cafena/assets/images/logo/logo.png'
+                      src={
+                        home
+                          ? 'https://xpressrow.com/html/cafena/cafena/assets/images/logo/logo.png'
+                          : 'https://xpressrow.com/html/cafena/cafena/assets/images/logo/logo-black.png'
+                      }
                       alt='Cafena'
                     />
                   </NavLink>
@@ -72,14 +99,14 @@ const Navbar = () => {
                     </ul>
                   </nav>
                   <div className='nav-actions d-flex'>
-                    <div className='nav-search'>
-                      <FaSearch />
-                    </div>
-                    <div className='nav-burger'>
-                      <FaBars />
-                    </div>
-                    <div className='nav-basket'>
-                      <FaShoppingBasket />
+                    <SearchNav />
+                    <div
+                      className='nav-basket'
+                      onClick={handleOpenBasketSidebar}>
+                      <span>
+                        <FaShoppingBasket />
+                        <span className='basket_count'>{sumCount}</span>
+                      </span>
                     </div>
                   </div>
                 </div>
@@ -90,6 +117,7 @@ const Navbar = () => {
         </div>
       </header>
       <MobileSidebar />
+      <BasketSidebar />
     </>
   )
 }
