@@ -1,11 +1,13 @@
 import React from "react";
-import { Route, Routes } from "react-router-dom";
+import { Route, Router, Routes } from "react-router-dom";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import Main from "./layout/Main";
 import Home from "./pages/Home";
 import "../src/assets/scss/main.scss";
 import Faq from "./pages/Faq";
 import About from "./pages/About";
+import ReservationPage from "./pages/ReservationPage";
+import DeatailsPage from "./DetailsComponents/DetailsPage";
 
 function App() {
   return (
@@ -14,6 +16,8 @@ function App() {
         <Route index element={<Home/>}/>
         <Route path="/faq" element={<Faq/>}/>
         <Route path="/about" element={<About/>} />
+        <Route path="/reservation" element={<ReservationPage/>}/>
+        <Route path="/details" element={<DeatailsPage/>}/>
         {/* ABOUT */}
         {/* MENU */}
         {/* RESERVATION */}

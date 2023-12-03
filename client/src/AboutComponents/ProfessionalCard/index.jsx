@@ -15,13 +15,14 @@ const ProfessionalCard = ({image,name,experience}) => {
         <div className="social-links">
             <div className="social-links__trigger">
             <LuPlus />
-            </div>
             <ul className='list-unstyled'>
-                <li><a href=""><FaFacebookF /></a></li>
-                <li><a href=""><FaTwitter /></a></li>
-                <li><a href=""><FaPinterestP /></a></li>
-                <li><a href=""><FaLinkedinIn /></a></li>
+                <li className='face'><a href=""><FaFacebookF /></a></li>
+                <li className='ywit'><a href=""><FaTwitter /></a></li>
+                <li className='pint'><a href=""><FaPinterestP /></a></li>
+                <li className='in'><a href=""><FaLinkedinIn /></a></li>
             </ul>
+            </div>
+            
         </div>
 
     </div>

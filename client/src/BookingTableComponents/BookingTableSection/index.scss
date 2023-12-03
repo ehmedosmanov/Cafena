@@ -1,0 +1,49 @@
+#booking-table{
+    background-color: black;
+    padding-top: 125px;
+    padding-bottom: 120px;
+    .map{
+      padding: 0; 
+      
+    }
+    .res{
+        padding: 0;
+       .map-reserv{
+        background: #13131A;
+        border: 1px solid #32323D;
+        padding: 50px 80px;
+        margin-bottom: 50px;
+        margin-left: 0;
+        height: 100%;
+        .resrv-heading{
+            .sub-title{
+                color: #ffffff;
+                background: #C7A17A;
+                font-family: "Jost", sans-serif;
+                display: inline-block;
+                font-size: 12px;
+                text-transform: uppercase;
+                padding: 1.5px 13px;
+                letter-spacing: 2px;
+                border-radius: 3px;
+                line-height: 22px;
+                margin-bottom: 23px;
+            }
+            .title{
+                color: #ffffff;
+                font-size: 55px;
+                line-height: 57px;
+                text-transform: uppercase;
+            }
+        }
+    } 
+    }
+    
+}
+@media screen  and (max-width:992px){
+    #booking-table{
+        .map{
+            min-height: 550px;
+        }
+    }
+}

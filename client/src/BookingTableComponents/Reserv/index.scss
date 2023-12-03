@@ -1,0 +1,41 @@
+.reser{
+    margin-top: 20px;
+    .form{
+        position: relative;
+      .reserv-inp{
+        border: 1px solid #32323D;
+        background: #09090D;
+        color: #a7a7a7;
+        font-size: 13px;
+        padding: 15px 20px;
+        width: 100%;
+        font-weight: 500;
+    }  
+    .res-icon{
+        position: absolute;
+        right: 30px;
+        font-size: 15px;
+        color: #a7a7a7;
+        top: 50%;
+        transform: translateY(-50%);    
+    }
+    .err{
+        color: white;
+    }
+    }
+    
+    
+}
+.reservbtn{
+        font-size: 12px;
+        text-transform: uppercase;
+        color: #ffffff;
+        letter-spacing: 2px;
+        background: #c7a17a;
+        padding: 9.5px 34px;
+        border-radius: 5px;
+        border: 1px solid #c7a17a;
+        font-weight: 500;
+        margin-top: 30px;
+     
+}

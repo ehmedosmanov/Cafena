@@ -2,7 +2,7 @@ import React from 'react'
 import "./inde.scss"
 import Professional from '../Professional'
 
-
+// https://xpressrow.com/html/cafena/cafena/assets/images/logo/favicon.ico 
 const ProfessionalSection = () => {
   return (
     <>

@@ -15,7 +15,7 @@ console.log(data);
     <div className='row'>
 {
   data && data.map((x)=>(
-    <NewsCard image={x.image} name={x.name} about={x.about} date={x.data} description={x.description}/>
+    <NewsCard key={x.id} image={x.image} name={x.name} about={x.about} date={x.data} description={x.description}/>
   ))
 }
     </div>

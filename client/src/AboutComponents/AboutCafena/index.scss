@@ -1,0 +1,102 @@
+#about-cafena{
+    overflow: hidden;
+    padding-bottom: 105px;
+    padding-top: 125px;
+    position: relative!important;
+   .shape__1{
+    top: 80px;
+    left: 0;
+    position: absolute!important;
+    color: #a7a7a7;
+    margin-bottom: 0;
+}
+   
+   .shape__2{
+    position: absolute!important;
+    top: -60px;
+    color: #a7a7a7;
+    margin-bottom: 0;
+    right: 0;
+   }
+  .about__left{
+    position: relative!important;
+    margin-left: 4rem;
+    
+    .small{
+        left: -130px;
+        bottom: 0px;
+        position: absolute!important;
+        font-size: .875em;
+    }
+  } 
+  .about__right--2{
+    text-align: left;
+    margin-top: 20px;
+    .section-heading{
+        position: relative;
+        z-index: 2;
+        .sub-title{
+            color: #ffffff;
+            background: #C7A17A;
+            font-family: "Jost", sans-serif;
+            display: inline-block;
+            font-size: 12px;
+            text-transform: uppercase;
+            padding: 1.5px 13px;
+            letter-spacing: 2px;
+            border-radius: 3px;
+            line-height: 22px;
+            margin-bottom: 23px;
+        }
+        .title{
+            font-size: 55px;
+            line-height: 57px;
+            text-transform: uppercase;
+            margin-bottom: 25px;
+        }
+        p{
+            font-size: 18px;
+            color: #a7a7a7;
+            margin-bottom: 0;
+        }
+    }
+  }
+  .about__list{
+    margin-top: 25px;
+    li{
+        margin-bottom: 18px;
+        color: #1b2026;
+        font-size: 18px;
+        font-weight: 500;
+        .icon{
+            color: #292d32;
+            width: 40px;
+            height: 40px;
+            border-radius: 7px;
+            border: 1px solid #E2DFDD;
+            margin-right: 15px;
+            display: inline-block;
+        transition: 0.3s;
+        text-align: center;
+            line-height: 40px;
+        }
+    }
+    li:hover .icon{
+        color: white;
+        background-color: #292d32;
+        transition: 0.3s;
+    }
+  }
+
+} 
+@media screen and (max-width:700px) {
+    #about-cafena{
+        .about__left{
+            margin-left: 0px;
+           .small{
+            display: none;
+        } 
+        }
+        
+    }
+}
