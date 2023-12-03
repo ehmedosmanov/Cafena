@@ -5,6 +5,7 @@ import Main from "./layout/Main";
 import Home from "./pages/Home";
 import "../src/assets/scss/main.scss";
 import Faq from "./pages/Faq";
+import Not404 from "./pages/Not404";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         {/* SHOP */}
         {/* CONTACT */}
       </Route>
+        <Route path="/*" element={<Not404/>}/>
     </Routes>
   );
 }
