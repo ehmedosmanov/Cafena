@@ -1,0 +1,23 @@
+.search-form {
+  position: relative;
+  top: 0;
+  left: 0;
+  input {
+    width: 100%;
+    border: 1px solid #e2dfdd;
+    box-shadow: none;
+    outline: none;
+    padding: 12px 17px;
+    border-radius: 6px;
+  }
+  button {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #e2dfdd;
+    background: none;
+    outline: none;
+    border: none;
+  }
+}

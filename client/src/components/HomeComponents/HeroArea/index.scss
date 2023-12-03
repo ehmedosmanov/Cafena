@@ -1,8 +1,5 @@
 #hero-area {
-  background-image: linear-gradient(
-      rgba(0, 0, 0, 0.4),
-      rgba(33, 37, 36, 0.6)
-    ),
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(33, 37, 36, 0.6)),
     url(https://xpressrow.com/html/cafena/cafena/assets/images/hero/hero-img-3-1.jpeg);
   min-height: 90vh;
   background-position: center top;
@@ -14,6 +11,7 @@
     justify-content: center;
     flex-direction: column;
     min-height: 90vh;
+    // min-height: 54vh;
     position: relative;
 
     h1 {
@@ -31,8 +29,9 @@
     }
     .hero-social_medias {
       font-size: 18px;
+      display: flex;
+      gap: 17px;
       .social-media {
-        margin-right: 32px;
         cursor: pointer;
         transition: all 0.3s;
         &:hover {
@@ -60,7 +59,9 @@
   }
   .play-video {
     position: absolute;
-    right: 152px;
+    // right: 152px;
+    bottom: 14%;
+    right: 0;
     border: 0;
     bottom: 100px;
     display: flex;
@@ -74,12 +75,12 @@
       margin-left: 15px;
     }
     .open-vide_modal {
-      font-size: 50px;
+      font-size: 23px;
       border: 1px solid #ccc;
       border-radius: 100%;
       display: flex;
       justify-content: center;
-      padding: 25px;
+      padding: 35px;
       align-items: center;
       text-align: center;
       color: #ccc;
@@ -94,7 +95,7 @@
     );
     position: fixed;
     top: 0;
-    bottom: 0;  
+    bottom: 0;
     left: 0;
     right: 0;
     height: 100vh;
@@ -114,6 +115,20 @@
   }
 }
 
+@media screen and (max-width: 992px) {
+  #hero-area {
+    .hero-content {
+      min-height: 54vh;
+    }
+    .play-video {
+      position: relative;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+    }
+  }
+}
 
 @media screen and (max-width: 768px) {
   #hero-area {
@@ -121,8 +136,8 @@
       text-align: center;
       align-items: center;
       justify-content: flex-start;
-      padding: 80px 0;
-      .hero-buttons  {
+      padding: 56px 0;
+      .hero-buttons {
         display: flex;
         flex-direction: column;
         width: 60%;
@@ -130,16 +145,17 @@
         .custom-btn_secondary {
           margin: 0;
         }
-
       }
       .hero-social_medias {
+        .social-media {
+          flex-direction: column;
+        }
       }
     }
-    .play-video {
-      top: 80%;
-      left: 50%;
-      transform: translate(-50%,-50%);
-    }
- 
+    // .play-video {
+    //   top: 80%;
+    //   left: 50%;
+    //   transform: translate(-50%,-50%);
+    // }
   }
 }

@@ -1,18 +1,199 @@
 {
-  "posts": [
+  "products": [
     {
       "id": 1,
-      "image": "https://xpressrow.com/html/cafena/cafena/assets/images/menu/menu-1.jpeg",
+      "image": [
+        "https://xpressrow.com/html/cafena/cafena/assets/images/products/shop/s-p-1.png",
+        "https://xpressrow.com/html/cafena/cafena/assets/images/products/shop/s-p-2.png"
+      ],
       "name": "AMERICANO COFFEE",
-      "price": {
-        "original": 325.0,
-        "discounted": 348.0
-      },
+      "price": 325.0,
+      "discount": 15,
       "isStock": true,
       "categoryId": 1,
       "sku": "2584-MK63",
-      "brandId": 1,
+      "brandId": "Brenda",
       "rating": 3
+    },
+    {
+      "id": 2,
+      "image": [
+        "https://xpressrow.com/html/cafena/cafena/assets/images/products/shop/s-p-1.png",
+        "https://xpressrow.com/html/cafena/cafena/assets/images/products/shop/s-p-2.png"
+      ],
+      "name": "VICARAGUA COFFEE BEANS",
+      "price": 225.0,
+      "discount": 27,
+      "isStock": false,
+      "categoryId": 2,
+      "sku": "2484-SK23",
+      "brandId": "Brenda",
+      "rating": 5
+    },
+    {
+      "id": 3,
+      "image": [
+        "https://xpressrow.com/html/cafena/cafena/assets/images/products/shop/s-p-3.png",
+        "https://xpressrow.com/html/cafena/cafena/assets/images/products/shop/s-p-4.png"
+      ],
+      "name": "BRAZIL COFFEE GRED",
+      "price": 375.0,
+      "discount": null,
+      "isStock": true,
+      "categoryId": 4,
+      "sku": "2584-MK63",
+      "brandId": "Brend",
+      "rating": 2
+    },
+    {
+      "id": 4,
+      "image": [
+        "https://xpressrow.com/html/cafena/cafena/assets/images/products/shop/s-p-5.png",
+        "https://xpressrow.com/html/cafena/cafena/assets/images/products/shop/s-p-6.png"
+      ],
+      "name": "ESPRESSO LUNGO",
+      "price": 325.0,
+      "discount": null,
+      "isStock": true,
+      "categoryId": 5,
+      "sku": "2584-MK63",
+      "brandId": "Brend",
+      "rating": 5
+    },
+    {
+      "id": 5,
+      "image": [
+        "https://xpressrow.com/html/cafena/cafena/assets/images/products/pp-1.png",
+        "https://xpressrow.com/html/cafena/cafena/assets/images/products/pp-2.png"
+      ],
+      "name": "ESPRESSO RISTRETTO",
+      "price": 685.0,
+      "discount": 55,
+      "isStock": true,
+      "categoryId": 4,
+      "sku": "2584-AA63",
+      "brandId": "Brend",
+      "rating": 3
+    },
+    {
+      "id": 6,
+      "image": [
+        "https://xpressrow.com/html/cafena/cafena/assets/images/products/shop/s-p-7.png",
+        "https://xpressrow.com/html/cafena/cafena/assets/images/products/shop/s-p-8.png"
+      ],
+      "name": "LATTE MACCHIATO",
+      "price": 525.0,
+      "discount": 65,
+      "isStock": false,
+      "categoryId": 1,
+      "sku": "1554-MQ63",
+      "brandId": "Brend",
+      "rating": 5
+    },
+    {
+      "id": 7,
+      "image": [
+        "https://xpressrow.com/html/cafena/cafena/assets/images/products/shop/s-p-4.png",
+        "https://xpressrow.com/html/cafena/cafena/assets/images/products/shop/s-p-5.png"
+      ],
+      "name": "ESPRESSO MACCHIATO",
+      "price": 525.0,
+      "discount": 55,
+      "isStock": false,
+      "categoryId": 4,
+      "sku": "1554-MQ63",
+      "brandId": "Brend",
+      "rating": 5
+    },
+    {
+      "id": 8,
+      "image": [
+        "https://xpressrow.com/html/cafena/cafena/assets/images/products/shop/s-p-2.png",
+        "https://xpressrow.com/html/cafena/cafena/assets/images/products/shop/s-p-3.png"
+      ],
+      "name": "IRISH COFFEE",
+      "price": 125.0,
+      "discount": 15,
+      "isStock": true,
+      "categoryId": 4,
+      "sku": "1554-MQ63",
+      "brandId": "Brend",
+      "rating": 2
+    },
+    {
+      "id": 9,
+      "image": [
+        "https://xpressrow.com/html/cafena/cafena/assets/images/products/shop/s-p-1.png",
+        "https://xpressrow.com/html/cafena/cafena/assets/images/products/shop/s-p-2.png"
+      ],
+      "name": "BRAZIL COFFEE GRED",
+      "price": 525.0,
+      "discount": 55,
+      "isStock": true,
+      "categoryId": 4,
+      "sku": "1554-MQ63",
+      "brandId": "Brend",
+      "rating": 3
+    }
+  ],
+  "category": [
+    {
+      "id": 1,
+      "name": "ROSTED COFFEE"
+    },
+    {
+      "id": 2,
+      "name": "CREUSET COCOTTE"
+    },
+    {
+      "id": 3,
+      "name": "CREUSET COFFEE"
+    },
+    {
+      "id": 4,
+      "name": "CAPPUCCINO"
+    },
+    {
+      "id": 5,
+      "name": "Coffe Americano"
+    }
+  ],
+  "popularMenu": [
+    {
+      "id": 1,
+      "image": "https://xpressrow.com/html/cafena/cafena/assets/images/menu/menu-2-1.png",
+      "title": "Americano Rosted GRED",
+      "price": 12.0
+    },
+    {
+      "id": 2,
+      "image": "https://xpressrow.com/html/cafena/cafena/assets/images/menu/menu-2-2.png",
+      "title": "VIRGIN COFFEE GRED",
+      "price": 12.0
+    },
+    {
+      "id": 3,
+      "image": "https://xpressrow.com/html/cafena/cafena/assets/images/menu/menu-2-3.png",
+      "title": "JAPANIS COFFEE GRED",
+      "price": 12.0
+    },
+    {
+      "id": 4,
+      "image": "https://xpressrow.com/html/cafena/cafena/assets/images/menu/menu-2-4.png",
+      "title": "CAFÈ AU LAIT Coffee",
+      "price": 12.0
+    },
+    {
+      "id": 5,
+      "image": "https://xpressrow.com/html/cafena/cafena/assets/images/menu/menu-2-5.png",
+      "title": "ESPRESSO RISTRETTO",
+      "price": 12.0
+    },
+    {
+      "id": 6,
+      "image": "https://xpressrow.com/html/cafena/cafena/assets/images/menu/menu-2-6.png",
+      "title": "JAPANIS COFFEE GRED",
+      "price": 12.0
     }
   ],
   "features": [

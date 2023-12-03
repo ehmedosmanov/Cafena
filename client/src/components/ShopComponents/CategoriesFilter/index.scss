@@ -1,0 +1,19 @@
+.categories-filter {
+  .category-box {
+    cursor: pointer;
+    color: #525050;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-size: 15px;
+    border: 1px solid #e2dfdd;
+    padding: 12px 17px;
+    border-radius: 6px;
+    transition: all 0.3s;
+    display: flex;
+    justify-content: space-between;
+    &:hover {
+      transition: all 0.3s;
+      border-color: #000;
+    }
+  }
+}

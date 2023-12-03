@@ -1,0 +1,25 @@
+#popular-products {
+  padding: 100px 0;
+  color: #fff;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.5)),
+    url(https://xpressrow.com/html/cafena/cafena/assets/images/bg/pp-bg-3-1.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  .products-title_left {
+    .banner {
+      background-color: #c7a17a;
+      padding: 7px 10px;
+      font-size: 14px;
+      margin-bottom: 25px;
+      border-radius: 5px;
+      min-height: 100%;
+      display: inline-block;
+      // margin: 10px 0;
+    }
+    h2 {
+      font-size: 55px;
+      line-height: 57px;
+    }
+  }
+}

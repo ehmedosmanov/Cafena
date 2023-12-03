@@ -1,13 +1,13 @@
 import React from 'react'
-import BasketSidebar from '../../components/BasketSidebar'
-import HeroArea from '../../components/HeroArea'
+import HeroArea from '../../components/HomeComponents/HeroArea'
+import PopularProductsSection from '../../components/HomeComponents/PopularProductsSection'
 
 const Home = () => {
   return (
     <>
       {/* Home */}
       <HeroArea />
-      <BasketSidebar/>
+      <PopularProductsSection />
     </>
   )
 }
