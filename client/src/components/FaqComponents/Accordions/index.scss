@@ -1,26 +1,26 @@
-.container {
+#FaqComponents{
 
-  .accordion_wrapper{
+.container {
+  .row{
     background: #ffffff;
     border-radius: 10px;
     box-shadow: 0px 14px 40px 0px rgba(220, 220, 220, 0.3);
     border: 1px solid #E2DFDD;
-    padding: 90px 120px;
-    padding-top: 100px;
-    margin-left: 65px;
-    margin-right: 65px;
-    padding-right: 200px;
+    padding: 50px;
     .title {
       display: flex;
+      justify-content: start;
+      // align-items: center;
       gap: 20px;
-      font-size: 26px;
       font-weight: 800;
-      padding: 50px;
+      margin: 10px;
+      
       .itag{
           background-color: #C7A17A;
           color: white;
           transition: 300ms;
           border-radius: 8px;
+          min-width: 30px;
           font-size: 28px;
       }
       &.active {
@@ -32,19 +32,57 @@
       }
     }
     .content {
+      box-shadow: 0px 14px 40px 0px rgba(209, 182, 248, 0.3);
       overflow: hidden;
       transition: 500ms;
-      font-size: 26px;
+      font-size: 18px;
       opacity: 85%;
       height: 0;
       &.active {
-        height: 170px;
-        background-color: aqua;
-      //   transform: rotate(360deg);
+        height: 105px;
+        padding-left: 50px;
+        padding-right: 50px;
         .itag{
           transform: rotate(180deg);
       }
       }
     }
   }
+}
+@media only screen and (max-width: 1200px) {
+  .container {
+    .row{
+      .content {
+        height: 0;
+        &.active {
+          height: 160px;
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 768px) {
+  .container {
+    .row{
+      .content {
+        height: 0;
+        &.active {
+          height: 230px;
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 534px) {
+  .container {
+    .row{
+      .content {
+        height: 0;
+        &.active {
+          height: 295px;
+        }
+      }
+    }
+  }
+}
 }
