@@ -74,7 +74,7 @@ const Products = () => {
             </div>
             <div className="col-xl-6 col-lg-12 col-md-12 col-12">
                 <div className="product-details__content">
-                    <div className="tr-wrapper d-flex align-items-center justify-content-between">
+                    <div className="tr-wrapper d-flex align-items-center ">
                         <h2 className="title">Americano Coffee Beans</h2>
                         <div className="rating-wrapper">
                             <div className="rattings d-flex align-items-center">
