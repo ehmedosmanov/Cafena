@@ -6,6 +6,7 @@ import './index.scss';
 import { IoPersonOutline } from "react-icons/io5";
 import { FaRegCalendarAlt } from "react-icons/fa";
 import { AiOutlineClockCircle } from "react-icons/ai";
+import Button from '../../components/CommonComponents/Button';
 
 const SignupSchema = Yup.object().shape({
   person: Yup.string()
@@ -58,13 +59,13 @@ const Reserv = () => {
               </div>
               <div className="col-12 col-md-12 col-lg-12 reser">
                 <div className="form">
-                  <Field className="reserv-inp" name="time" type="time" />
+                  <Field className="reserv-inp " name="time" type="time" />
                   <span className='res-icon'><AiOutlineClockCircle /></span>
                   {errors.time && touched.time ? <div className='err'>{errors.time}</div> : null}
                 </div>
               </div>
-              <div className="col-xl-12 text-center">
-                <button className='reservbtn' type="submit">Book a table</button>
+              <div className="col-xl-12 text-center bt-alt">
+                <Button type="submit">Book a table</Button>
               </div>
             </div>
           </Form>
