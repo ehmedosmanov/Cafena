@@ -39,7 +39,6 @@ const Products = ({ detailProducts }) => {
 
   const handleAddBasket = e => {
     e.preventDefault()
-    // addToBasket(detailProducts, { count: quantity })
     addToBasket(detailProducts, quantity)
   }
 
@@ -144,9 +143,11 @@ const Products = ({ detailProducts }) => {
                     className='inp-quantity'
                     type='number'
                     placeholder='1'
+                    value={quantity}
                     min={1}
+                    max={15} 
                     onChange={e =>
-                      setQuantity(Math.max(1, parseInt(e.target.value, 10)))
+                      setQuantity(Math.max(1, Math.min(15, parseInt(e.target.value, 10))))
                     }
                   />
 

@@ -7,16 +7,18 @@ const BasketProvider = ({ children }) => {
   const [quantity, setQuantity] = useState(1)
 
   const addToBasket = (product, quantityToAdd = 1) => {
-    const findProductFromBasket = basket.find(x => x.id === product.id)
-
+    const newQuantity = Math.max(1, Math.min(15, quantityToAdd));
+  
+    const findProductFromBasket = basket.find(x => x.id === product.id);
+  
     if (findProductFromBasket) {
-      findProductFromBasket.count += quantityToAdd
-      setBasket([...basket])
-      return
+      findProductFromBasket.count += newQuantity;
+      setBasket([...basket]);
+      return;
     }
-
-    setBasket([...basket, { ...product, count: quantityToAdd }])
-  }
+  
+    setBasket([...basket, { ...product, count: newQuantity }]);
+  };
 
   const handleInc = id => {
     const findProductFromBasket = basket.find(x => x.id === id)

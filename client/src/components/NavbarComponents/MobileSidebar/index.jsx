@@ -37,20 +37,17 @@ const MobileSidebar = () => {
                 <NavLink to={'/'}>HOME</NavLink>
               </li>
               <li className='sidebar-item'>
-                <NavLink to={'/'}>ABOUT</NavLink>
+                <NavLink to={'/About'}>ABOUT</NavLink>
               </li>
               <li className='sidebar-item'>
-                <NavLink to={'/'}>MENU</NavLink>
+                <NavLink to={'/Menu'}>MENU</NavLink>
               </li>
               <li className='sidebar-item'>
-                <NavLink to={'/'}>RESERVATION</NavLink>
+                <NavLink to={'/Reservation'}>RESERVATION</NavLink>
               </li>
               <li className='sidebar-item' onClick={handleToggle}>
-                <NavLink to={'/'}>SHOP</NavLink>
+                <NavLink to={'/Shop'}>SHOP</NavLink>
                 <ul className={`${isOpen ? 'show' : ''} accordion-menu`}>
-                  <li className='accordion-item'>
-                    <NavLink to={'/'}>SHOP DETAIL</NavLink>
-                  </li>
                   <li className='accordion-item'>
                     <NavLink to={'/'}>BLOG</NavLink>
                   </li>
@@ -64,7 +61,7 @@ const MobileSidebar = () => {
                 </span>
               </li>
               <li className='sidebar-item'>
-                <NavLink to={'/'}>CONTACT</NavLink>
+                <NavLink to={'/Contact'}>CONTACT</NavLink>
               </li>
             </ul>
           </nav>

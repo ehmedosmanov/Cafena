@@ -18,7 +18,7 @@ const BasketSidebar = () => {
     (acc, x) => acc + calcDiscountedPrice(x.price, x.discount) * x.count,
     0
   )
-
+  const sumCount = basket.reduce((acc, x) => acc + x.count, 0)
   return (
     <aside id='basket-sidebar' className={`${isOpen ? 'show' : ''}`}>
       <div className='basket-sideber_top'>
@@ -30,7 +30,7 @@ const BasketSidebar = () => {
       </div>
       <div className='basket-sidebar_content'>
         <div className='basket-sidebar_heading pt-3'>
-          <h4>Card Items - {basket.length}</h4>
+          <h4>Card Items - {sumCount}</h4>
         </div>
         <div className='basket-sidebar_products'>
           {basket.length === 0 ? (
