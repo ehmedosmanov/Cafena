@@ -1,18 +1,21 @@
-import { createContext } from 'react'
+import { createContext, useState } from 'react'
 import useLocaleStorage from '../hooks/useLocaleStorage'
 export const BasketContext = createContext()
 
 const BasketProvider = ({ children }) => {
   const [basket, setBasket] = useLocaleStorage('basket')
+  const [quantity, setQuantity] = useState(1)
 
-  const addToBasket = product => {
+  const addToBasket = (product, quantityToAdd = 1) => {
     const findProductFromBasket = basket.find(x => x.id === product.id)
+
     if (findProductFromBasket) {
-      findProductFromBasket.count++
+      findProductFromBasket.count += quantityToAdd
       setBasket([...basket])
       return
     }
-    setBasket([...basket, { ...product, count: 1 }])
+
+    setBasket([...basket, { ...product, count: quantityToAdd }])
   }
 
   const handleInc = id => {
@@ -44,7 +47,9 @@ const BasketProvider = ({ children }) => {
     addToBasket,
     removeFromBasket,
     handleInc,
-    handleDec
+    handleDec,
+    quantity,
+    setQuantity
   }
   return (
     <BasketContext.Provider value={data}>{children}</BasketContext.Provider>

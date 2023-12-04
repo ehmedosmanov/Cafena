@@ -6,6 +6,9 @@ import { CiStar } from 'react-icons/ci'
 import { FaStar } from 'react-icons/fa'
 import './index.scss'
 import { BasketContext } from '../../../context/BasketContext'
+import { useNavigate } from 'react-router-dom'
+import { Link } from 'react-router-dom'
+import { WishlistContext } from '../../../context/WishlistContext'
 
 const ProductCard = ({
   id,
@@ -16,12 +19,14 @@ const ProductCard = ({
   price,
   discount,
   sku,
-  rating,
-  categoryId
+  rating
 }) => {
+  //States
   const [isHover, setIsHover] = useState(false)
   const { addToBasket } = useContext(BasketContext)
+  const { addToWishlist } = useContext(WishlistContext)
 
+  //Handle Mouse Events For Changeing Image
   const handleMouseEnter = () => {
     setIsHover(true)
   }
@@ -44,6 +49,7 @@ const ProductCard = ({
   }
   const starts = generateStart(rating)
 
+  //Calculate Discount Price
   const calcDiscountedAmount = (price * discount) / 100
   const discountedPrice = price - calcDiscountedAmount
   const classNames = `${
@@ -52,69 +58,83 @@ const ProductCard = ({
 
   return (
     <div className={classNames}>
-      <div
-        className={`${cafenaProduct ? 'cafena-product' : ''} product`}
-        onMouseEnter={handleMouseEnter}
-        onMouseLeave={handleMouseLeave}>
-        <div className='product_actions'>
-          <button className='add-basket' onClick={() => addToBasket(product)}>
-            <CiShoppingBasket />
-          </button>
-          <button className='wishlist-btn'>
-            <CiHeart />
-          </button>
-          <button className='detail-modal'>
-            <FaEye />
-          </button>
-        </div>
-        <div className='product_imgs'>
-          {isHover ? (
-            <img src={image[0]} className='on-hover' />
-          ) : (
-            <img src={image[1]} className='default-img' />
-          )}
-        </div>
-        <div className='product_content'>
-          <div className='product_rating'>
-            {cafenaProduct ? (
-              ''
+      <Link to={`/Product/ProductDetail/${id}`}>
+        <div
+          className={`${cafenaProduct ? 'cafena-product' : ''} product`}
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}>
+          <div className='product_actions'>
+            <button
+              className='add-basket'
+              onClick={e => {
+                e.preventDefault()
+                addToBasket(product)
+              }}>
+              <CiShoppingBasket />
+            </button>
+            <button
+              className='wishlist-btn'
+              onClick={e => {
+                e.preventDefault()
+                addToWishlist(product)
+              }}>
+              <CiHeart />
+            </button>
+            <button
+              className='detail-modal'
+              onClick={() => navigate(`/Shop/ProductDetail/${id}`)}>
+              <FaEye />
+            </button>
+          </div>
+          <div className='product_imgs'>
+            {isHover ? (
+              <img src={image[0]} className='on-hover' />
             ) : (
-              <>
-                <div className='product-rating'>
-                  <span>COFFE</span>
-                </div>
-                <div className='stars'>
-                  {starts &&
-                    starts.map((star, index) => (
-                      <span key={index} className='star'>
-                        {star}
-                      </span>
-                    ))}
-                </div>
-              </>
+              <img src={image[1]} className='default-img' />
             )}
           </div>
-          {/* <span>{cate</span> */}
-          <div className='product_name py-1'>
-            <a href='#'>{name}</a>
-          </div>
-          <div className='product_price pb-4'>
-            <span className='price-title'>PRICE - </span>
-            <span className='price'>
-              {discount === null ? (
-                <p>${price}</p>
+          <div className='product_content'>
+            <div className='product_rating'>
+              {cafenaProduct ? (
+                ''
               ) : (
                 <>
-                  ${discountedPrice} /
-                  <span className='dis-price'>
-                    <del>${price}</del>
-                  </span>
+                  <div className='product-rating'>
+                    <span>COFFE</span>
+                  </div>
+                  <div className='stars'>
+                    {starts &&
+                      starts.map((star, index) => (
+                        <span key={index} className='star'>
+                          {star}
+                        </span>
+                      ))}
+                  </div>
                 </>
               )}
-            </span>
+            </div>
+            {/* <span>{cate</span> */}
+            <div className='product_name py-1'>
+              <a href='#'>{name}</a>
+            </div>
+            <div className='product_price pb-4'>
+              <span className='price-title'>PRICE - </span>
+              <span className='price'>
+                {discount === null ? (
+                  <p>${price}</p>
+                ) : (
+                  <>
+                    ${discountedPrice} /
+                    <span className='dis-price'>
+                      <del>${price}</del>
+                    </span>
+                  </>
+                )}
+              </span>
+            </div>
           </div>
         </div>
-      </div>
+      </Link>
     </div>
   )
 }

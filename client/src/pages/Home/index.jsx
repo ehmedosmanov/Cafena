@@ -14,14 +14,14 @@ const Home = () => {
   return (
     <>
       <HeroArea />
-      <PopularProductsSection />
-      <LayoutCoffee></LayoutCoffee>
-      <CoffeMachineSection></CoffeMachineSection>
-      <OurNewsSection></OurNewsSection>
-      <BookingTable></BookingTable>
       <Feature__items></Feature__items>
       <Our_history></Our_history>
       <Manu></Manu>
+      <CoffeMachineSection></CoffeMachineSection>
+      <PopularProductsSection />
+      {/* <LayoutCoffee></LayoutCoffee> */}
+      <OurNewsSection></OurNewsSection>
+      <BookingTable></BookingTable>
     </>
   )
 }

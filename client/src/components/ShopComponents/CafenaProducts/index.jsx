@@ -184,6 +184,7 @@ const CafenaProducts = () => {
                       pageData &&
                       pageData.map(product => (
                         <ProductCard
+                          productId={product.id}
                           product={product}
                           cafenaProduct
                           key={product.id}

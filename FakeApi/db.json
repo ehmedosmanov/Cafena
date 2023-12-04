@@ -60,7 +60,8 @@
       "categoryId": 1,
       "sku": "2584-MK63",
       "brandId": "Brenda",
-      "rating": 3
+      "rating": 3,
+      "desc": "The coffee is brewed by first roasting the green coffee beans over hot coals in brazier.Once the beans are roasted each participant is given an opportunity to sample The coffee is brewed."
     },
     {
       "id": 2,
@@ -75,7 +76,8 @@
       "categoryId": 2,
       "sku": "2484-SK23",
       "brandId": "Brenda",
-      "rating": 5
+      "rating": 5,
+      "desc": "The coffee is brewed by first roasting the green coffee beans over hot coals in brazier.Once the beans are roasted each participant is given an opportunity to sample The coffee is brewed."
     },
     {
       "id": 3,
@@ -86,11 +88,12 @@
       "name": "BRAZIL COFFEE GRED",
       "price": 375.0,
       "discount": null,
-      "isStock": true,
+      "isStock": false,
       "categoryId": 4,
       "sku": "2584-MK63",
       "brandId": "Brend",
-      "rating": 2
+      "rating": 2,
+      "desc": "The coffee is brewed by first roasting the green coffee beans over hot coals in brazier.Once the beans are roasted each participant is given an opportunity to sample The coffee is brewed."
     },
     {
       "id": 4,
@@ -105,7 +108,8 @@
       "categoryId": 5,
       "sku": "2584-MK63",
       "brandId": "Brend",
-      "rating": 5
+      "rating": 5,
+      "desc": "The coffee is brewed by first roasting the green coffee beans over hot coals in brazier.Once the beans are roasted each participant is given an opportunity to sample The coffee is brewed."
     },
     {
       "id": 5,
@@ -120,7 +124,8 @@
       "categoryId": 4,
       "sku": "2584-AA63",
       "brandId": "Brend",
-      "rating": 3
+      "rating": 3,
+      "desc": "The coffee is brewed by first roasting the green coffee beans over hot coals in brazier.Once the beans are roasted each participant is given an opportunity to sample The coffee is brewed."
     },
     {
       "id": 6,
@@ -135,7 +140,8 @@
       "categoryId": 1,
       "sku": "1554-MQ63",
       "brandId": "Brend",
-      "rating": 5
+      "rating": 5,
+      "desc": "The coffee is brewed by first roasting the green coffee beans over hot coals in brazier.Once the beans are roasted each participant is given an opportunity to sample The coffee is brewed."
     },
     {
       "id": 7,
@@ -150,7 +156,8 @@
       "categoryId": 4,
       "sku": "1554-MQ63",
       "brandId": "Brend",
-      "rating": 5
+      "rating": 5,
+      "desc": "The coffee is brewed by first roasting the green coffee beans over hot coals in brazier.Once the beans are roasted each participant is given an opportunity to sample The coffee is brewed."
     },
     {
       "id": 8,
@@ -165,7 +172,8 @@
       "categoryId": 4,
       "sku": "1554-MQ63",
       "brandId": "Brend",
-      "rating": 2
+      "rating": 2,
+      "desc": "The coffee is brewed by first roasting the green coffee beans over hot coals in brazier.Once the beans are roasted each participant is given an opportunity to sample The coffee is brewed."
     },
     {
       "id": 9,
@@ -176,11 +184,12 @@
       "name": "BRAZIL COFFEE GRED",
       "price": 525.0,
       "discount": 55,
-      "isStock": true,
+      "isStock": false,
       "categoryId": 4,
       "sku": "1554-MQ63",
       "brandId": "Brend",
-      "rating": 3
+      "rating": 3,
+      "desc": "The coffee is brewed by first roasting the green coffee beans over hot coals in brazier.Once the beans are roasted each participant is given an opportunity to sample The coffee is brewed."
     }
   ],
   "category": [

@@ -6,6 +6,7 @@ import GlobalContextProvider from '../../context/GlobalContext'
 import Overlay from '../../components/CommonComponents/Overlay'
 import BasketProvider from '../../context/BasketContext'
 import ShopProvider from '../../context/ShopContext'
+import WishlistProvider from '../../context/WishlistContext'
 
 const Main = () => {
   const location = useLocation()
@@ -15,12 +16,14 @@ const Main = () => {
     <>
       <GlobalContextProvider>
         <BasketProvider>
-          <ShopProvider>
-            {isHome ? <Navbar home /> : <Navbar />}
-            <Overlay />
-            <Outlet />
-            <Footer />
-          </ShopProvider>
+          <WishlistProvider>
+            <ShopProvider>
+              {isHome ? <Navbar home /> : <Navbar />}
+              <Overlay />
+              <Outlet />
+              <Footer />
+            </ShopProvider>
+          </WishlistProvider>
         </BasketProvider>
       </GlobalContextProvider>
     </>

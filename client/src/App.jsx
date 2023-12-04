@@ -9,7 +9,7 @@ import Faq from './pages/Faq'
 import About from './pages/About'
 import ReservationPage from './pages/ReservationPage'
 import DeatailsPage from './DetailsComponents/DetailsPage'
-import Not404 from "./pages/Not404";
+import Not404 from './pages/Not404'
 
 function App() {
   return (
@@ -17,18 +17,16 @@ function App() {
       <Route path='/' element={<Main />}>
         <Route index element={<Home />} />
         <Route path='/Shop' element={<Shop />} />
+        <Route
+          path='/Product/ProductDetail/:productId'
+          element={<DeatailsPage />}
+        />
         <Route path='/faq' element={<Faq />} />
         <Route path='/about' element={<About />} />
         <Route path='/reservation' element={<ReservationPage />} />
-        <Route path='/details' element={<DeatailsPage />} />
-        {/* ABOUT */}
-        {/* MENU */}
-        {/* RESERVATION */}
-        {/* FAQ */}
-        {/* SHOP */}
-        {/* CONTACT */}
+        {/* <Route path='/details' element={<DeatailsPage />} /> */}
       </Route>
-        <Route path="/*" element={<Not404/>}/>
+      <Route path='/*' element={<Not404 />} />
     </Routes>
   )
 }

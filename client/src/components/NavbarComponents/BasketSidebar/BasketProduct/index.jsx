@@ -15,7 +15,11 @@ const BasketProduct = ({ id, image, name, price, discount, count }) => {
   return (
     <div className='basket-sidebar_product py-4'>
       <div className='basket-sidebar_product-img'>
-        <img src={image[0]} alt='' />
+        {image && image[0] ? (
+          <img src={image[0]} alt='' />
+        ) : (
+          <span>No image available</span>
+        )}
       </div>
       <div className='basket-sidebar_product-content'>
         <a href='#' className='basket-sidebar_product-title'>

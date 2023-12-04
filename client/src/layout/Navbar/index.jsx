@@ -9,11 +9,13 @@ import { GlobalContext } from '../../context/GlobalContext'
 import { BasketContext } from '../../context/BasketContext'
 import BasketSidebar from '../../components/NavbarComponents/BasketSidebar'
 import WishlistSidebar from '../../components/NavbarComponents/WishlistSidebar'
+import { WishlistContext } from '../../context/WishlistContext'
 
 const Navbar = ({ home }) => {
   const { handleOpenBasketSidebar, handleOpenWishlistSidebar } =
     useContext(GlobalContext)
   const { basket } = useContext(BasketContext)
+  const { wishlist } = useContext(WishlistContext)
   const [isSticky, setIsSticky] = useState(false)
 
   useEffect(() => {
@@ -37,6 +39,8 @@ const Navbar = ({ home }) => {
     isSticky ? 'header-sticky' : ''
   }`
   const sumCount = basket.reduce((acc, x) => acc + x.count, 0)
+
+  const wishlistCount = wishlist.length
 
   return (
     <>
@@ -89,9 +93,6 @@ const Navbar = ({ home }) => {
                         <NavLink to={'/Shop'}>SHOP</NavLink>
                         <ul className='sub-menu'>
                           <li className='sub-menu__item'>
-                            <NavLink to={'/Product/:id'}>SHOP DETAIL</NavLink>
-                          </li>
-                          <li className='sub-menu__item'>
                             <NavLink to={'/Blog'}>BLOG</NavLink>
                           </li>
                           <li className='sub-menu__item'>
@@ -119,7 +120,7 @@ const Navbar = ({ home }) => {
                       onClick={handleOpenWishlistSidebar}>
                       <span className='position-relative'>
                         <FaHeart />
-                        <span className='wishlist_count'>0</span>
+                        <span className='wishlist_count'>{wishlistCount}</span>
                       </span>
                     </div>
                   </div>

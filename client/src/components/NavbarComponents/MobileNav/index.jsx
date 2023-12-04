@@ -7,6 +7,7 @@ import { GlobalContext } from '../../../context/GlobalContext'
 import SearchNav from '../../../layout/Navbar/SearchNav'
 import { useState } from 'react'
 import { BasketContext } from '../../../context/BasketContext'
+import { WishlistContext } from '../../../context/WishlistContext'
 
 const MobileNav = () => {
   const dropdownData = [
@@ -16,12 +17,15 @@ const MobileNav = () => {
   ]
 
   const { basket } = useContext(BasketContext)
+  const { wishlist } = useContext(WishlistContext)
   const {
     handleOpenSidebar,
     handleOpenBasketSidebar,
     handleOpenWishlistSidebar
   } = useContext(GlobalContext)
   const sumCount = basket.reduce((acc, x) => acc + x.count, 0)
+
+  const wishlistTotal = wishlist.length
   return (
     <div className='row d-xl-none d-lg-flex align-items-center'>
       <div className='col-lg-9 col-8'>
@@ -77,7 +81,7 @@ const MobileNav = () => {
           <div className='nav-wishlist' onClick={handleOpenWishlistSidebar}>
             <span className='position-relative'>
               <FaHeart />
-              <span className='wishlist_count'>0</span>
+              <span className='wishlist_count'>{wishlistTotal}</span>
             </span>
           </div>
         </div>

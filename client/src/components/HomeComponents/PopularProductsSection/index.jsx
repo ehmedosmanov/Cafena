@@ -1,12 +1,14 @@
 import React, { useState } from 'react'
+import { useParams } from 'react-router-dom'
 import './index.scss'
 import Button from '../../CommonComponents/Button'
 import ProductCard from '../../CommonComponents/ProductCard'
 import useFetch from '../../../hooks/useFetch'
 import { NavLink } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
 const PopularProductsSection = () => {
-  const baseUrl = 'http://localhost:3000/products'
+  const baseUrl = `http://localhost:3000/products/`
   const { data, loading } = useFetch(baseUrl)
   if (loading) {
     return <p>...LOADING</p>
