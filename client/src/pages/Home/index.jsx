@@ -9,6 +9,7 @@ import { Our_history } from '../../components/Our_history'
 import Manu from '../../components/CafenaPopularMenu'
 import HeroArea from '../../components/HomeComponents/HeroArea'
 import PopularProductsSection from '../../components/HomeComponents/PopularProductsSection'
+import SwiperSection from '../../HomeSections/SwiperSection'
 
 const Home = () => {
   return (
@@ -21,6 +22,7 @@ const Home = () => {
       <PopularProductsSection />
       {/* <LayoutCoffee></LayoutCoffee> */}
       <OurNewsSection></OurNewsSection>
+      <SwiperSection></SwiperSection>
       <BookingTable></BookingTable>
     </>
   )

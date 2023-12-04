@@ -1,3 +1,4 @@
+import  Button  from '../../components/CommonComponents/Button';
 import React from 'react'
 import { LuPlus } from "react-icons/lu";
 import "./index.scss"
@@ -15,7 +16,7 @@ const CoffeMachineSection = () => {
           <h2 className='title'>COFFEE MACHINE,BUY FOR HOME</h2>
           <p>Donec et nibh maximus, congue est eu, mattis nunc. Praesent ut quam quis quam venenatis fringilla. Morbi vestibulum id tellus mmodo mattis. Aliquam erat volutpat. <br />                                mattis nunc. Praesent ut quam quis quam venenatis fringilla. Morbi vestibulum id tellus mmodo mattis.</p>
         </div>
-        <div className="btn-m d-flex align-items-center"><a href="">Discover now</a></div>
+       <Button>Discover now</Button>
       </div>
     </div>
     <div className='machine-img col-lg-6 col-md-12 col-12 order-lg-2 order-md-1 '>

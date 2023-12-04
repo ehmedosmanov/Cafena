@@ -136,7 +136,7 @@ const Footer = () => {
               </div>
               <div className='col-lg-3 col-md-12 col-12 top-bot'>
                 <a href='' className='go-top-bottom'>
-                  <span>
+                  <span onClick={scrollToTop}>
                     go top <FaArrowUpLong />
                   </span>
                 </a>

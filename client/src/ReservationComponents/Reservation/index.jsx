@@ -3,6 +3,7 @@ import { Formik, Form, Field } from "formik";
 import "./index.scss"
 import * as Yup from 'yup';
 import Swal from 'sweetalert2';
+import Button from '../../components/CommonComponents/Button';
 
 
 const SignupSchema = Yup.object().shape({
@@ -80,10 +81,10 @@ const Reservation = () => {
           {errors.email && touched.email ? (
              <div>{errors.email}</div>
            ) : null}</div></div> 
-          <div className='col-xl-12 text-center'>
-           <button type="submit" >
+          <div className='col-xl-12  text-center'>
+           <Button type="submit" >
              Submit
-           </button></div>
+           </Button></div>
            </div>
          </Form>
        )}

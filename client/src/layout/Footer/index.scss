@@ -1,9 +1,8 @@
 #footer {
   background-color: black;
   color: white;
-
+  border-top: 1px solid #32323d;
   .top-footer {
-    border-top: 1px solid #32323d;
     padding-top: 155px;
     position: relative;
     .go-top {
@@ -19,7 +18,8 @@
       .top {
         border: 1px solid white;
         width: 50px;
-        height: 50px;
+      background-color: black;
+      height: 50px;
         border-radius: 50%;
         font-size: 18px;
         text-align: center;

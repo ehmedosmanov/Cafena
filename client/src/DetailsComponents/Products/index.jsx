@@ -17,6 +17,7 @@ import { useEffect } from 'react'
 import { CiStar } from 'react-icons/ci'
 import { BasketContext } from '../../context/BasketContext'
 import { WishlistContext } from '../../context/WishlistContext'
+import Button from '../../components/CommonComponents/Button'
 
 const Products = ({ detailProducts }) => {
   const {
@@ -149,9 +150,9 @@ const Products = ({ detailProducts }) => {
                     }
                   />
 
-                  <a className='site-btn' href='' onClick={handleAddBasket}>
+                  <Button onClick={handleAddBasket}>
                     add to cart
-                  </a>
+                  </Button>
                 </div>
                 <a className='wishlist' href='' onClick={handleWishlist}>
                   <IoMdHeart />
