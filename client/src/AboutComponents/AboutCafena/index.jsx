@@ -1,24 +1,27 @@
 import React from 'react'
 import "./index.scss"
 import { IoCheckmarkOutline } from "react-icons/io5";
-
+import Shape11 from '../../assets/images/about-shape-2-1.png'
+import Shape12 from '../../assets/images/about-shape-2-2.png'
+import About12 from '../../assets/images/about-img-2-1.png'
+import About22 from '../../assets/images/about-img-2-2.png'
 const AboutCafena = () => {
   return (
     <>
     {/* section about cafena start  */}
 <section id='about-cafena'>
     <span className='shape shape__1 position-absolute'>
-        <img src="https://xpressrow.com/html/cafena/cafena/assets/images/shape/about-shape-2-1.png" alt="" />
+        <img src={Shape11} alt="Shape1-1" />
     </span>
     <span className='shape shape__2 position-absolute'>
-        <img src="https://xpressrow.com/html/cafena/cafena/assets/images/shape/about-shape-2-2.png" alt="" />
+        <img src={Shape12} alt="Shape1-2" />
     </span>
 <div className="container">
   <div className="row">
     <div className='col-xl-7 col-lg-12  col-12 col-md-12'>
       <div className='about__left about__left--2 position-relative'>
-        <img className='big' src="https://xpressrow.com/html/cafena/cafena/assets/images/about/about-img-2-1.png" alt="" />
-<img className='small position-absolute' src="https://xpressrow.com/html/cafena/cafena/assets/images/about/about-img-2-2.png" alt="" />
+        <img className='big' src={About12} alt="Abou11" />
+<img className='small position-absolute' src={About22} alt="Abou22" />
       </div>
     </div>
     <div className=' col-xl-5 col-lg-12 col-12 col-md-12'>
