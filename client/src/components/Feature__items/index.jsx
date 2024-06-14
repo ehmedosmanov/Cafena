@@ -3,7 +3,8 @@ import Feature_item from './Feature_item'
 import useFetch from '../../hooks/useFetch'
 import './index.scss'
 function Feature__items() {
-  const baseUrl = 'http://localhost:3000/features'
+  const baseUrl =
+    'https://cafena-server-5xkmmsy2c-ehmedosmanovs-projects.vercel.app/features'
   const { data } = useFetch(baseUrl)
   return (
     <>

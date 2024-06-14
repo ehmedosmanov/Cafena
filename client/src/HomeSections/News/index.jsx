@@ -2,22 +2,32 @@ import React, { useEffect, useState } from 'react'
 import NewsCard from '../NewsCard'
 
 const News = () => {
-const [data, setData] = useState([])
-function datalar() {
-  fetch("http://localhost:3000/news").then(res=>res.json()).then(items=>setData(items))
-}
-useEffect(() => {
-  datalar()
-}, [])
-console.log(data);
+  const [data, setData] = useState([])
+  function datalar() {
+    fetch(
+      'https://cafena-server-5xkmmsy2c-ehmedosmanovs-projects.vercel.app/news'
+    )
+      .then(res => res.json())
+      .then(items => setData(items))
+  }
+  useEffect(() => {
+    datalar()
+  }, [])
+  console.log(data)
 
   return (
     <div className='row'>
-{
-  data && data.map((x)=>(
-    <NewsCard key={x.id} image={x.image} name={x.name} about={x.about} date={x.data} description={x.description}/>
-  ))
-}
+      {data &&
+        data.map(x => (
+          <NewsCard
+            key={x.id}
+            image={x.image}
+            name={x.name}
+            about={x.about}
+            date={x.data}
+            description={x.description}
+          />
+        ))}
     </div>
   )
 }

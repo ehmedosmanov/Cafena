@@ -13,8 +13,10 @@ import './index.scss'
 
 const CafenaProducts = () => {
   //Urls
-  const baseUrl = 'http://localhost:3000/products'
-  const categoryUrl = 'http://localhost:3000/category'
+  const baseUrl =
+    'https://cafena-server-5xkmmsy2c-ehmedosmanovs-projects.vercel.app/products'
+  const categoryUrl =
+    'https://cafena-server-5xkmmsy2c-ehmedosmanovs-projects.vercel.app/category'
 
   //Fethcing Datas
   const { data, loading } = useFetch(baseUrl)

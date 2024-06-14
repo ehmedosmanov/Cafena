@@ -8,7 +8,7 @@ import { NavLink } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom'
 
 const PopularProductsSection = () => {
-  const baseUrl = `http://localhost:3000/products/`
+  const baseUrl = `https://cafena-server-5xkmmsy2c-ehmedosmanovs-projects.vercel.app/products/`
   const { data, loading } = useFetch(baseUrl)
   if (loading) {
     return <p>...LOADING</p>
