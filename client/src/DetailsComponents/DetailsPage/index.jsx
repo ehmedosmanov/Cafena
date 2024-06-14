@@ -11,7 +11,7 @@ const DeatailsPage = () => {
     const fetchDetailData = async () => {
       try {
         const res = await axios.get(
-          `http://localhost:3000/products/${productId}`
+          `https://cafena-server-5xkmmsy2c-ehmedosmanovs-projects.vercel.app/products/${productId}`
         )
         const result = await res.data
         setDetailProducts(result)

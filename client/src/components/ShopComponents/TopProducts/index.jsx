@@ -2,7 +2,8 @@ import React from 'react'
 import TopProductCard from './TopProductCard'
 import useFetch from '../../../hooks/useFetch'
 const TopProducts = () => {
-  const baseUrl = 'http://localhost:3000/products'
+  const baseUrl =
+    'https://cafena-server-5xkmmsy2c-ehmedosmanovs-projects.vercel.app/products'
   const { data, loading } = useFetch(baseUrl)
   if (loading) {
     return <p>...LOADING</p>

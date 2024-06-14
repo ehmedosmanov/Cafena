@@ -3,7 +3,8 @@ import './index.scss'
 import PopularMenu from './PopularMenu'
 import useFetch from '../../hooks/useFetch'
 function Manu() {
-  const baseUrlMenu = 'http://localhost:3000/popularMenu'
+  const baseUrlMenu =
+    'https://cafena-server-5xkmmsy2c-ehmedosmanovs-projects.vercel.app/popularMenu'
   const { data, loading } = useFetch(baseUrlMenu)
   if (loading) {
     return <p>...Loading</p>
