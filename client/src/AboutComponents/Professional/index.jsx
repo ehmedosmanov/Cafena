@@ -4,9 +4,7 @@ import ProfessionalCard from '../ProfessionalCard'
 const Professional = () => {
   const [data, setData] = useState([])
   function datalar() {
-    fetch(
-      'https://cafena-server-5xkmmsy2c-ehmedosmanovs-projects.vercel.app/professional'
-    )
+    fetch('https://cafenaserver.onrender.com/professional')
       .then(res => res.json())
       .then(items => setData(items))
   }

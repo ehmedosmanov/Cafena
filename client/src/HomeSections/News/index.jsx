@@ -4,9 +4,7 @@ import NewsCard from '../NewsCard'
 const News = () => {
   const [data, setData] = useState([])
   function datalar() {
-    fetch(
-      'https://cafena-server-5xkmmsy2c-ehmedosmanovs-projects.vercel.app/news'
-    )
+    fetch('https://cafenaserver.onrender.com/news')
       .then(res => res.json())
       .then(items => setData(items))
   }
